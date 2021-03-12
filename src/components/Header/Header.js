@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
 import './Header.css'
-import logo from '../../../images/maslool_header.png'
+import logo from './maslool_header.png'
 
 export default class Header extends Component {
     static contextType = UserContext
@@ -13,99 +13,104 @@ export default class Header extends Component {
     }
 
     renderAdminLinks() {
-        if(this.context.user.admin === true) {
+        if (this.context.user.admin === true) {
             return (
                 <>
-                <Link
-                    className = 'leftNav'
-                    to = '/add_trail'
-                >
-                Add Trail
-                </Link>
-                <Link 
-                    className = 'leftNav'
-                    to = '/messages'
-                >
-                Messages
-                </Link>
-                <Link
-                    className = 'leftNav'
-                    to = '/alerts'
-                >
-                Alerts
-                </Link>
-                <Link 
-                    className = 'leftNav'
-                    to = '/users'
-                >
-                Users
-                </Link>
+                    <NavLink
+                        className='leftNav'
+                        to='/add_trail'
+                    >
+                        ADD TRAIL
+                </NavLink>
+                    <NavLink
+                        className='leftNav'
+                        to='/messages'
+                    >
+                        MESSAGES
+                </NavLink>
+                    <NavLink
+                        className='leftNav'
+                        to='/alerts'
+                    >
+                        ALERTS
+                </NavLink>
+                    <NavLink
+                        className='leftNav'
+                        to='/users'
+                    >
+                        USERS
+                </NavLink>
                 </>
             )
         } else {
             return (
-                <Link 
-                    className = 'leftNav'
-                    to = '/contact'
+                <NavLink
+                    className='leftNav'
+                    to='/contact'
                 >
-                Contact Admin
-                </Link>
+                    CONTACT ADMIN
+                </NavLink>
             )
         }
     }
 
     renderAuthorisedLinks() {
         return (
-            <div className = 'authorised_links'>
-                <nav>
-                    <Link 
-                        className = 'leftNav'
-                        to = '/'
-                    >
-                        Welcome
-                    </Link>
-                    <Link 
-                        className = 'leftNav'
-                        to = '/trails'
-                    >
-                        Trails
-                    </Link>
-                    {this.renderAdminLinks()}
-                    <Link 
-                        className = 'rightNav'
-                        to ='/profile'
-                    >
-                        {this.context.user.username}
-                    </Link>
-                    <Link
-                        className = 'rightNav'
-                        onClick={this.handleLogoutClick}
-                        to='/'>
-                            Logout
-                    </Link>
-                </nav>
+            <div className='authorised_links'>
+                <NavLink
+                    activeClassName='active_nav'
+                    className='leftNav'
+                    to='/'
+                >
+                    WELCOME
+                    </NavLink>
+                <NavLink
+                    activeClassName='active_nav'
+                    className='leftNav'
+                    to='/trails'
+                >
+                    TRAILS
+                    </NavLink>
+                {this.renderAdminLinks()}
+                <NavLink
+                    activeClassName='active_nav'
+                    className='rightNav'
+                    to='/profile'
+                >
+                    {this.context.user.username}
+                </NavLink>
+                <NavLink
+                    activeClassName='active_nav'
+                    className='rightNav'
+                    onClick={this.handleLogoutClick}
+                    to='/'>
+                    LOGOUT
+                    </NavLink>
             </div>
         )
     }
 
     renderLoginLinks() {
         return (
-            <div className = 'login_links'>
-                <Link 
-                    to='/'
+            <div className='login_links'>
+                <NavLink
+                    activeClassName='active_nav'
+                    exact to='/'
                 >
-                    Home
-                </Link>
-                <Link 
+                    HOME
+                </NavLink>
+                <NavLink
+                    activeClassName='active_nav'
                     to='/join'
                 >
-                    Register
-                </Link>
-                <Link 
+                    REGISTER
+                </NavLink>
+                <NavLink
+                    activeClassName='active_nav'
                     to='/login'
                 >
-                    Login
-                </Link>
+                    LOGIN
+                </NavLink>
             </div>
         )
     }
@@ -113,14 +118,14 @@ export default class Header extends Component {
     render() {
         return (
             <header>
-                <Link 
-                    className = 'header'
-                    to = '/'
+                <Link
+                    className='header_logo'
+                    to='/'
                 >
-                    <img src={logo} alt='logo of the website' />
+                    <img className='logo_image' src={logo} alt='logo of the website' />
                 </Link>
                 {TokenService.hasAuthToken()
-                    ? this.renderAuthorisedLinks()
+                    ? this.renderAuthorisedNavLinks()
                     : this.renderLoginLinks()
                 }
             </header>

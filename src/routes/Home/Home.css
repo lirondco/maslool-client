@@ -1,0 +1,17 @@
+.home {
+    margin: 2%;
+    padding: 2%;
+}
+
+.home h2 {
+    margin-bottom: 1%;
+}
+
+hr {
+    border: 1px solid;
+}
+
+.home p {
+    margin-top: 2%;
+    text-align: justify;
+}

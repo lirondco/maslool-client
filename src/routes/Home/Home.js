@@ -4,7 +4,7 @@ import './Home.css'
 export default class Home extends Component {
     render() {
         return (
-            <section>
+            <section className = 'home'>
                 <h2>Welcome to Maslool</h2>
                 <hr />
                 <p>

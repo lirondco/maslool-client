@@ -1,0 +1,47 @@
+header {
+    background-color: #374355;
+    text-align: center;
+}
+
+.logo_image {
+    width: 100%;
+    border: none;
+    vertical-align: top;
+}
+
+@media screen and (min-width: 500px) {
+    .logo_image {
+        width: 30%;
+        border: none;
+        vertical-align: top;
+    }
+}
+
+.header_logo {
+    border: none;
+    text-decoration: none;
+}
+
+.login_links {
+    background-color: #374355;
+    display: flex;
+    justify-content: center;
+}
+
+.login_links a {
+    background-color: inherit;
+    color: #F3F4F5;
+    margin: 1% 3% 1% 3%;
+}
+
+.login_links a:hover {
+    color: #F9D4BF;
+    text-decoration: underline;
+}
+
+.active_nav {
+    color: #F9D4BF !important;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
