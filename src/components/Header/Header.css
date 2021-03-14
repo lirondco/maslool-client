@@ -10,6 +10,27 @@ header {
 }
 
 @media screen and (min-width: 500px) {
+    header {
+        display: flex;
+        justify-content: left !important;
+        flex-direction: row;
+        text-align: left !important;
+        background-color: #374355;
+    }
+
+    .login_links {
+        background-color: #374355;
+        display: flex;
+        justify-content: left !important;
+        flex: 10;
+    }
+    
+    .header_logo {
+        flex: 6;
+        background-color: #374355;
+        margin-right: -30%;
+    }
+
     .logo_image {
         width: 30%;
         border: none;
