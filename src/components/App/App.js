@@ -5,6 +5,7 @@ import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
 import Registration from '../../routes/Registration/Registration'
 import Home from '../../routes/Home/Home'
 import Login from '../../routes/Login/Login'
+import Welcome from '../../routes/Welcome/Welcome'
 import './App.css'
 import PrivateOnlyRoute from '../PrivateOnlyRoute/PrivateOnlyRoute'
 
@@ -38,10 +39,10 @@ export default class App extends Component {
               path={'/login'}
               component={Login}
             />
-            {/* <PrivateOnlyRoute 
-              exact
-              path={'/'}
-            /> */}
+            <PrivateOnlyRoute 
+              path={'/welcome'}
+              component={Welcome}
+            />
           </Switch>
         </main>
       </div>
