@@ -85,6 +85,9 @@ export default class RegistrationForm extends Component {
             )
         }
         return (
+            <>
+            <h2>Register</h2>
+            <hr />
             <form
                 onSubmit={this.handleSubmit}
             >
@@ -139,6 +142,7 @@ export default class RegistrationForm extends Component {
                     <Link to='/login'>Already have an account?</Link>
                 </footer>
             </form>
+            </>
         )
     }
 

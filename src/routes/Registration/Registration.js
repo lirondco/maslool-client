@@ -28,8 +28,6 @@ export default class Registration extends Component {
     render() {
         return (
             <section className = 'registrationpage'>
-                <h2>Register</h2>
-                <hr />
                 <RegistrationForm 
                     onRegistrationSuccess={this.handleRegistrationSuccess}
                 />

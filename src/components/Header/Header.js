@@ -17,24 +17,28 @@ export default class Header extends Component {
             return (
                 <>
                     <NavLink
+                        activeClassName='active_nav'
                         className='leftNav'
                         to='/add_trail'
                     >
                         ADD TRAIL
                 </NavLink>
                     <NavLink
+                        activeClassName='active_nav'
                         className='leftNav'
                         to='/messages'
                     >
                         MESSAGES
                 </NavLink>
                     <NavLink
+                        activeClassName='active_nav'
                         className='leftNav'
                         to='/alerts'
                     >
                         ALERTS
                 </NavLink>
                     <NavLink
+                        activeClassName='active_nav'
                         className='leftNav'
                         to='/users'
                     >
@@ -45,6 +49,7 @@ export default class Header extends Component {
         } else {
             return (
                 <NavLink
+                    activeClassName='active_nav'
                     className='leftNav'
                     to='/contact'
                 >
@@ -60,14 +65,14 @@ export default class Header extends Component {
                 <NavLink
                     activeClassName='active_nav'
                     className='leftNav'
-                    to='/'
+                    to='/welcome'
                 >
                     WELCOME
                     </NavLink>
                 <NavLink
                     activeClassName='active_nav'
                     className='leftNav'
-                    to='/trails'
+                    exact to='/'
                 >
                     TRAILS
                     </NavLink>
@@ -79,13 +84,12 @@ export default class Header extends Component {
                 >
                     {this.context.user.username}
                 </NavLink>
-                <NavLink
-                    activeClassName='active_nav'
+                <Link
                     className='rightNav'
                     onClick={this.handleLogoutClick}
-                    to='/'>
+                    to='/home'>
                     LOGOUT
-                    </NavLink>
+                    </Link>
             </div>
         )
     }
@@ -95,7 +99,7 @@ export default class Header extends Component {
             <div className='login_links'>
                 <NavLink
                     activeClassName='active_nav'
-                    exact to='/'
+                    to='/home'
                 >
                     HOME
                 </NavLink>
@@ -125,7 +129,7 @@ export default class Header extends Component {
                     <img className='logo_image' src={logo} alt='logo of the website' />
                 </Link>
                 {TokenService.hasAuthToken()
-                    ? this.renderAuthorisedNavLinks()
+                    ? this.renderAuthorisedLinks()
                     : this.renderLoginLinks()
                 }
             </header>

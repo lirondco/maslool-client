@@ -1,0 +1,74 @@
+@media screen and (min-width: 500px) {
+    form {
+        width: 80% !important;
+        margin: 0 auto !important;
+      }
+      
+      label,
+      input {
+        display: inline-block !important;
+      }
+      
+      label {
+        width: 30% !important;
+        text-align: right !important;
+      }
+      
+      label+input {
+        width: 30% !important;
+        margin: 1% 30% 0 4% !important;
+      }
+        
+      input+input {
+        float: right !important;
+      }
+    
+      button {
+        display: inline-block !important;
+        margin: 1% 40% 1% 20% !important;
+      }
+    
+      form.error {
+          margin: 1% 40% 0 20% !important;
+      }
+    }
+    
+    @media screen and (max-width: 499px) {
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 3%;
+    }
+    
+    form .main_reg_form {
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+    }
+    
+    form input, form label {
+        margin: 1%;
+    }
+    
+    form button {
+        margin: 2%;
+    }
+    
+    form a, form .error {
+        margin: 2%;
+    }
+    
+    form a {
+        text-decoration: underline;
+        color: blue;
+    }
+    
+    form a:hover {
+        color: purple;
+    }
+    
+    form a:active {
+        color: purple;
+    }
+    }

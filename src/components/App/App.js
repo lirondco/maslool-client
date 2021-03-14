@@ -4,7 +4,9 @@ import Header from '../Header/Header'
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
 import Registration from '../../routes/Registration/Registration'
 import Home from '../../routes/Home/Home'
+import Login from '../../routes/Login/Login'
 import './App.css'
+import PrivateOnlyRoute from '../PrivateOnlyRoute/PrivateOnlyRoute'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -25,14 +27,21 @@ export default class App extends Component {
           )}
           <Switch>
             <PublicOnlyRoute 
-              exact
-              path={'/'}
+              path={'/home'}
               component={Home}
             />
             <PublicOnlyRoute 
               path={'/join'}
               component={Registration}  
             />
+            <PublicOnlyRoute 
+              path={'/login'}
+              component={Login}
+            />
+            {/* <PrivateOnlyRoute 
+              exact
+              path={'/'}
+            /> */}
           </Switch>
         </main>
       </div>
