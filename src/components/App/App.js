@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
+import Registration from '../../routes/Registration/Registration'
 import Home from '../../routes/Home/Home'
 import './App.css'
 
@@ -27,6 +28,10 @@ export default class App extends Component {
               exact
               path={'/'}
               component={Home}
+            />
+            <PublicOnlyRoute 
+              path={'/join'}
+              component={Registration}  
             />
           </Switch>
         </main>

@@ -12,12 +12,33 @@ export default class RegistrationForm extends Component {
     }
     state = {
         error: null,
-        isLoading: false
+        isLoading: false,
+        password: null,
+        verify: null,
+        isMatch: false,
     }
 
     static contextType = UserContext;
 
     firstInput = React.createRef()
+
+    handlePasswordChange = ev => {
+        this.setState({ password: ev.target.value })
+        if (this.state.verify !== ev.target.value) {
+            this.setState({ isMatch: false, error: "Password must match" })
+        } else {
+            this.setState({ error: null, isMatch: true })
+        }
+    }
+
+    handlePasswordCheck = ev => {
+        this.setState({ verify: ev.target.value })
+        if (ev.target.value !== this.state.password) {
+            this.setState({ isMatch: false, error: "Password must match" })
+        } else {
+            this.setState({ error: null, isMatch: true })
+        }
+    }
 
     handleSubmit = ev => {
         ev.preventDefault()
@@ -29,7 +50,7 @@ export default class RegistrationForm extends Component {
             email: email.value
         })
             .then(user => {
-                this.setState({ error: null, isLoading: true })
+                this.setState({ error: null, isLoading: true, password: null })
                 AuthApiService.postLogin({
                     username: username.value,
                     password: password.value,
@@ -52,23 +73,74 @@ export default class RegistrationForm extends Component {
         this.firstInput.current.focus()
     }
 
+    componentWillUnmount() {
+        this.setState({ password: null })
+    }
+
     render() {
         const { error } = this.state
-        if(this.state.isLoading === true) {
+        if (this.state.isLoading === true) {
             return (
                 <Loading />
             )
         }
-        return(
-            <form 
+        return (
+            <form
                 onSubmit={this.handleSubmit}
             >
-                <div role='alert'>
-                    
+                <div className='main_reg_form'>
+                    <Label htmlFor='registration-username-input'>
+                        Username: <Required />
+                    </Label>
+                    <Input
+                        ref={this.firstInput}
+                        id='registration-username-input'
+                        name='username'
+                        required
+                    />
+                    <Label htmlFor='registration-password-input'>
+                        Password: <Required />
+                    </Label>
+                    <Input
+                        onChange={this.handlePasswordChange}
+                        id='registration-password-input'
+                        name='password'
+                        type='password'
+                        required
+                    />
+                    <Label htmlFor='registration-verify-password-input'>
+                        Repeat Password: <Required />
+                    </Label>
+                    <Input 
+                        onChange={this.handlePasswordCheck}
+                        type='password'
+                        id='registration-verify-password-input'
+                        name='verify-password'
+                        required
+                    />
+                    <Label htmlFor='registration-email-input'>
+                        Email Address: <Required />
+                    </Label>
+                    <Input
+                        id='registration-email-input'
+                        name='email'
+                        required
+                    />
                 </div>
+                <div role='alert'>
+                    {error && <p className="error">{error}</p>}
+                </div>
+                <footer>
+                    <Button disabled={this.state.isMatch === false} type='submit'>
+                        Register
+                    </Button>
+                    {' '}
+                    <br />
+                    <Link to='/login'>Already have an account?</Link>
+                </footer>
             </form>
         )
     }
- 
+
 }
 
