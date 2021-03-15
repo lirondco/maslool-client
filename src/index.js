@@ -5,13 +5,16 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './contexts/UserContext';
+import { TrailProvider } from './contexts/TrailContext';
 
 
 ReactDOM.render(
   <BrowserRouter>
+  <TrailProvider>
   <UserProvider>
     <App />
   </UserProvider>
+  </TrailProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

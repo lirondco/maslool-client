@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
 import Registration from '../../routes/Registration/Registration'
@@ -32,6 +32,11 @@ export default class App extends Component {
               component={Home}
             />
             <PublicOnlyRoute 
+              exact path={'/'}
+            >
+              <Redirect to='/home' />
+            </PublicOnlyRoute>
+            <PublicOnlyRoute 
               path={'/join'}
               component={Registration}  
             />
@@ -43,6 +48,9 @@ export default class App extends Component {
               path={'/welcome'}
               component={Welcome}
             />
+            <PrivateOnlyRoute exact path={'/'}>
+              <Redirect to='/trails' />
+            </PrivateOnlyRoute>
           </Switch>
         </main>
       </div>

@@ -72,7 +72,7 @@ export default class Header extends Component {
                 <NavLink
                     activeClassName='active_nav'
                     className='leftNav'
-                    exact to='/'
+                    to='/trails'
                 >
                     TRAILS
                     </NavLink>
@@ -124,7 +124,10 @@ export default class Header extends Component {
             <header>
                 <Link
                     className='header_logo'
-                    to='/'
+                    to= {TokenService.hasAuthToken()
+                        ? '/trails'
+                        : '/home'
+                    }
                 >
                     <img className='logo_image' src={logo} alt='logo of the website' />
                 </Link>
