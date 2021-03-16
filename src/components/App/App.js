@@ -8,6 +8,7 @@ import Login from '../../routes/Login/Login'
 import Welcome from '../../routes/Welcome/Welcome'
 import './App.css'
 import PrivateOnlyRoute from '../PrivateOnlyRoute/PrivateOnlyRoute'
+import TokenService from '../../services/token-service'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -32,11 +33,6 @@ export default class App extends Component {
               component={Home}
             />
             <PublicOnlyRoute 
-              exact path={'/'}
-            >
-              <Redirect to='/home' />
-            </PublicOnlyRoute>
-            <PublicOnlyRoute 
               path={'/join'}
               component={Registration}  
             />
@@ -48,9 +44,11 @@ export default class App extends Component {
               path={'/welcome'}
               component={Welcome}
             />
-            <PrivateOnlyRoute exact path={'/'}>
-              <Redirect to='/trails' />
-            </PrivateOnlyRoute>
+            <Route exact path={'/'}>
+              <Redirect to={TokenService.hasAuthToken()
+                ? '/trails'
+                : '/home'} />
+            </Route>
           </Switch>
         </main>
       </div>
