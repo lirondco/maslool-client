@@ -9,6 +9,7 @@ import Welcome from '../../routes/Welcome/Welcome'
 import './App.css'
 import PrivateOnlyRoute from '../PrivateOnlyRoute/PrivateOnlyRoute'
 import TokenService from '../../services/token-service'
+import TrailSearch from '../../routes/TrailSearch/TrailSearch'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -49,6 +50,10 @@ export default class App extends Component {
                 ? '/trails'
                 : '/home'} />
             </Route>
+            <PrivateOnlyRoute 
+              path={'/trails'}
+              component={TrailSearch}
+            />
           </Switch>
         </main>
       </div>

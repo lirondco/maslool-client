@@ -10,28 +10,23 @@ export default class TrailSearchForm extends Component {
     }
 
     state = {
-        searchQuery: ''
+        error: null
     }
 
     static contextType = AllTrailsContext
 
     firstInput = React.createRef()
 
+
     handleSearch = ev => {
         ev.preventDefault()
-        this.setState({ searchQuery: '' })
-        this.context.setError('Processing your request ...')
+        this.setState({ error: 'Processing your request ...' })
         this.context.clearSearchResult()
         const { search, location, difficulty, rating } = ev.target
-        let nameSearch = ''
-        if (search.value) {
-            nameSearch = search.value
-        }
-        this.setState({ searchQuery: `?name=${nameSearch}&region=${location.value}&difficulty=${difficulty.value}&rating=${rating.value}`})
-        TrailsApiService.searchTrails(this.state.searchQuery)
+        TrailsApiService.searchTrails(`?name=${search.value}&region=${location.value}&difficulty=${difficulty.value}&rating=${rating.value}`)
             .then(this.context.setSearchResult)
-            .then(this.props.onSearchSuccess())
-            .then(this.context.clearError())
+            .then(this.props.onSearchSuccess)
+            .then(this.setState({error: null}))
             .catch(this.context.setError)
     }
 
@@ -44,7 +39,8 @@ export default class TrailSearchForm extends Component {
     }
 
     render() {
-        const { allTrails, error } = this.context
+        const { allTrails } = this.context
+        const error = this.state.error
         let uniqueLocations = [...new Set(allTrails.map(trail => trail.location.region))]
         const difficulties = ['Beginner', 'Intermediate', 'Advanced']
         const ratings = [1, 2, 3, 4, 5]
@@ -52,7 +48,7 @@ export default class TrailSearchForm extends Component {
         return (
             <div className='TrailSearchForm'>
                 <h3>Search for your next hike</h3>
-                <form className='search_form'>
+                <form className='search_form' onSubmit={this.handleSearch}>
                     <Label htmlFor='search_box'>
                         Search by name:
                     </Label>

@@ -3,16 +3,16 @@ import TokenService from './token-service'
 
 const TrailsApiService = {
     searchTrails(query) {
-        return fetch(`${config.API_ENDPOINT}/${query}`, {
+        return fetch(`${config.API_ENDPOINT}/trails${query}`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-            .then(res => {
+            .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
     getTrail(trailId) {
@@ -21,11 +21,11 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken}`
             },
         })
-            .then(res => {
+            .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
     getTraiLComments(trailId) {
@@ -34,11 +34,11 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken}`
             },
         })
-            .then(res => {
+            .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
     getTrailRatings(trailId) {
@@ -65,11 +65,11 @@ const TrailsApiService = {
                 content
             })
         })
-            .then(res => {
+            .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
     postRating(trailId, rating) {
@@ -83,11 +83,11 @@ const TrailsApiService = {
                 rating
             })
         })
-            .then(res => {
+            .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
 }
