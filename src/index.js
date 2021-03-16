@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './contexts/UserContext';
 import { TrailProvider } from './contexts/TrailContext';
-import AllTrailsProvider from './contexts/AllTrailsContext';
+import { AllTrailsProvider } from './contexts/AllTrailsContext';
 
 
 ReactDOM.render(
