@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 
 const AllTrailsContext = React.createContext({
     allTrails: [],
+    searchResult: [],
     error: null,
     setError: () => {},
     clearError: () => {},
     setAllTrails: () => {},
+    setSearchResult: () => {},
+    clearSearchResult: () => {},
 })
 
 export default AllTrailsContext
@@ -13,11 +16,20 @@ export default AllTrailsContext
 export class AllTrailsProvider extends Component {
     state = {
         allTrails: [],
+        searchResult: [],
         error: null,
     };
 
     setAllTrails = allTrails => {
         this.setState({ allTrails })
+    }
+
+    setSearchResult = searchResult => {
+        this.setState({ searchResult })
+    }
+
+    clearSearchResult = () => {
+        this.setSearchResult(null)
     }
 
     setError = error => {
