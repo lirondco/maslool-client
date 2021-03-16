@@ -3,7 +3,7 @@ import TokenService from './token-service'
 
 const TrailsApiService = {
     searchTrails(query) {
-        return fetch(`${config.API_ENDPOINT}/trails?region=${query.region}&name=${query.name}&rating=${query.rating}&difficulty=${query.difficulty}`, {
+        return fetch(`${config.API_ENDPOINT}/${query}`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },

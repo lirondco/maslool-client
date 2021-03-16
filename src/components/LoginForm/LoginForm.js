@@ -22,7 +22,6 @@ export default class LoginForm extends Component {
     handleSubmit = ev => {
         ev.preventDefault()
         const { username, password } = ev.target
-
         this.setState({ error: "Processing your request ..." })
 
         AuthApiService.postLogin({

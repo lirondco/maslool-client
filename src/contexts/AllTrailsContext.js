@@ -44,10 +44,13 @@ export class AllTrailsProvider extends Component {
     render() {
         const value = {
             allTrails: this.state.allTrails,
+            searchResult: this.state.searchResult,
             error: this.state.error,
             setError: this.setError,
             clearError: this.clearError,
-            setAllTrails: this.setAllTrails
+            setAllTrails: this.setAllTrails,
+            setSearchResult: this.setSearchResult,
+            clearSearchResult: this.clearSearchResult,
         }
 
         return (
