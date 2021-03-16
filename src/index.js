@@ -6,17 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './contexts/UserContext';
 import { TrailProvider } from './contexts/TrailContext';
-import TrailSearchContext from './contexts/TrailSearchContext';
+import AllTrailsProvider from './contexts/AllTrailsContext';
 
 
 ReactDOM.render(
   <BrowserRouter>
     <TrailProvider>
-      <TrailSearchContext>
+      <AllTrailsProvider>
         <UserProvider>
           <App />
         </UserProvider>
-      </TrailSearchContext>
+      </AllTrailsProvider>
     </TrailProvider>
   </BrowserRouter>,
   document.getElementById('root')

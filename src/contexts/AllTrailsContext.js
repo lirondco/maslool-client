@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
 
-const TrailSearchContext = React.createContext({
-    trailSearchResult: [],
+const AllTrailsContext = React.createContext({
+    allTrails: [],
     error: null,
     setError: () => {},
     clearError: () => {},
-    setTrailSearchResult: () => {},
+    setAllTrails: () => {},
 })
 
-export default TrailSearchContext
+export default AllTrailsContext
 
-export class TrailSearchProvider extends Component {
+export class AllTrailsProvider extends Component {
     state = {
-        trailSearchResult: [],
+        allTrails: [],
         error: null,
     };
 
-    setTrailSearchResult = trailSearchResult => {
-        this.setState({ trailSearchResult })
+    setAllTrails = allTrails => {
+        this.setState({ allTrails })
     }
 
     setError = error => {
@@ -31,17 +31,17 @@ export class TrailSearchProvider extends Component {
 
     render() {
         const value = {
-            trailSearchResult: this.state.trailSearchResult,
+            allTrails: this.state.allTrails,
             error: this.state.error,
             setError: this.setError,
             clearError: this.clearError,
-            setTrailSearchResult: this.setTrailSearchResult
+            setAllTrails: this.setAllTrails
         }
 
         return (
-            <TrailSearchContext.Provider value={value}>
+            <AllTrailsContext.Provider value={value}>
                 {this.props.children}
-            </TrailSearchContext.Provider>
+            </AllTrailsContext.Provider>
         )
     }
 }
