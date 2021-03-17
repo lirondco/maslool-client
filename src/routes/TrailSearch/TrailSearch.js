@@ -12,12 +12,19 @@ export default class TrailSearch extends Component {
 
     static contextType = AllTrailsContext
 
+    componentDidMount = () => {
+        if (this.context.searchResult[0]) {
+            this.setState({ searchActive: false })
+        }
+    }
+
     handleSearchClick = () => {
         this.setState({ searchActive: false })
     }
 
     handleBackClick = () => {
         this.setState({ searchActive: true })
+        this.context.clearSearchResult()
     }
 
     renderResults = () => {

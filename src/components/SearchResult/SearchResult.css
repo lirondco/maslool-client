@@ -1,0 +1,23 @@
+.search_result {
+    margin: 2%;
+}
+
+.search_result a {
+    text-decoration: underline;
+}
+
+.search_result a h4:hover {
+    color: red !important;
+}
+
+.search_result a:hover {
+    color: red !important;
+}
+
+.search_result a h4:active {
+    color: red !important;
+}
+
+.search_result a:active {
+    color: red !important;
+}

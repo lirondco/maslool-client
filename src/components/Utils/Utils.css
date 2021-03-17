@@ -23,3 +23,7 @@
 .Button:disabled {
     background-color: gray;
 }
+
+.Button:active {
+    background-color: brown;
+}

@@ -8,13 +8,13 @@ export default class SearchResult extends Component {
         return (
             <div className='search_result'>
                 <Link to={`/trails/${this.props.id}`}>
-                    <p>{this.props.name}</p>
+                    <h4>{this.props.name}</h4>
                 </Link>
                 <StarRatings 
                     rating={this.props.rating}
                     starDimension='15px'
                     starSpacing='5px'
-                    starRatedColor='yellow'
+                    starRatedColor='red'
                     starEmptyColor='grey'
                 />
                 <p>Location: {this.props.address_line} {this.props.city}, {this.props.region} {this.props.postal_code}</p>

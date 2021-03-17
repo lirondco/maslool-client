@@ -9,24 +9,20 @@ export default class TrailSearchForm extends Component {
         onSearchSuccess: () => { }
     }
 
-    state = {
-        error: null
-    }
-
     static contextType = AllTrailsContext
 
     firstInput = React.createRef()
 
 
     handleSearch = ev => {
+        this.context.setError({ error: 'Processing your request...'})
         ev.preventDefault()
-        this.setState({ error: 'Processing your request ...' })
         this.context.clearSearchResult()
         const { search, location, difficulty, rating } = ev.target
         TrailsApiService.searchTrails(`?name=${search.value}&region=${location.value}&difficulty=${difficulty.value}&rating=${rating.value}`)
             .then(this.context.setSearchResult)
             .then(this.props.onSearchSuccess)
-            .then(this.setState({error: null}))
+            .then(this.context.clearError)
             .catch(this.context.setError)
     }
 
@@ -40,7 +36,6 @@ export default class TrailSearchForm extends Component {
 
     render() {
         const { allTrails } = this.context
-        const error = this.state.error
         let uniqueLocations = [...new Set(allTrails.map(trail => trail.location.region))]
         const difficulties = ['Beginner', 'Intermediate', 'Advanced']
         const ratings = [1, 2, 3, 4, 5]
@@ -96,12 +91,12 @@ export default class TrailSearchForm extends Component {
                             )   
                         })}
                     </select>
-                    <p>Leave fields blank to return all.</p>
+                    <p className='leave_fields_text'>Leave fields blank to return all.</p>
                     <Button type='submit'>
                         Search
                     </Button>
                     <div role='alert'>
-                        {error && <p className='error'>{error}</p>}
+                        {this.context.error && <p className='error'>{this.context.error.error}</p>}
                     </div>
                 </form>
             </div>
