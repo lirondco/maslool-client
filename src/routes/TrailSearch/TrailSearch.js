@@ -30,26 +30,30 @@ export default class TrailSearch extends Component {
     renderResults = () => {
         const { searchResult } = this.context
         return (
-        <>
-        <Link to='#' onClick={this.handleBackClick}>
-            <h3>{'<'} Back to Search</h3>
-        </Link>
-        {searchResult.map(trail => {
-            return (
-                <SearchResult 
-                    key={trail.id}
-                    id={trail.id}
-                    name={trail.name}
-                    rating={trail.rating}
-                    difficulty={trail.difficulty}
-                    address_line={trail.location.address_line}
-                    city={trail.location.city}
-                    region={trail.location.region}
-                    postal_code={trail.location.postal_code}
-                />
-            )
-        })}
-        </>
+            <>
+                <Link to='#' onClick={this.handleBackClick}>
+                    <h3>{'<'} Back to Search</h3>
+                </Link>
+                {searchResult.map(trail => {
+                    return (
+                        <ul>
+                            <li>
+                                <SearchResult
+                                    key={trail.id}
+                                    id={trail.id}
+                                    name={trail.name}
+                                    rating={trail.rating}
+                                    difficulty={trail.difficulty}
+                                    address_line={trail.location.address_line}
+                                    city={trail.location.city}
+                                    region={trail.location.region}
+                                    postal_code={trail.location.postal_code}
+                                />
+                            </li>
+                        </ul>
+                    )
+                })}
+            </>
         )
     }
 
@@ -59,8 +63,8 @@ export default class TrailSearch extends Component {
                 <h2>Base Camp</h2>
                 <hr />
                 {this.state.searchActive === true
-                    ? <TrailSearchForm 
-                    onSearchSuccess={this.handleSearchClick}
+                    ? <TrailSearchForm
+                        onSearchSuccess={this.handleSearchClick}
                     />
                     : this.renderResults()
                 }

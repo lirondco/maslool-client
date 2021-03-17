@@ -40,7 +40,6 @@ export default class Trail extends Component {
     render() {
         const { trail, error } = this.context
         let content
-        console.error('sldkjfslkdfjsldkfjsldkfj')
 
         if (error) {
             content = <NotFound />
