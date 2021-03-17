@@ -1,0 +1,29 @@
+.TrailPage {
+    margin: 2%;
+    padding: 2%;
+}
+
+.TrailPage h2 {
+    margin-bottom: 1%;
+}
+
+hr {
+    border: 1px solid;
+}
+
+.TrailInfo {
+    margin: 2%;
+}
+
+.TrailInfo a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.TrailInfo a:hover {
+    color: purple;
+}
+
+.TrailInfo a:visited {
+    color: purple;
+}

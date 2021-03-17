@@ -10,6 +10,8 @@ import './App.css'
 import PrivateOnlyRoute from '../PrivateOnlyRoute/PrivateOnlyRoute'
 import TokenService from '../../services/token-service'
 import TrailSearch from '../../routes/TrailSearch/TrailSearch'
+import Trail from '../../routes/Trail/Trail'
+import NotFound from '../NotFound/NotFound'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -51,8 +53,15 @@ export default class App extends Component {
                 : '/home'} />
             </Route>
             <PrivateOnlyRoute 
-              path={'/trails'}
+              exact path={'/trails'}
               component={TrailSearch}
+            />
+            <PrivateOnlyRoute 
+              path={'/trails/:trailId'}
+              component={Trail}
+            />
+            <Route 
+              component={NotFound}
             />
           </Switch>
         </main>

@@ -18,7 +18,7 @@ const TrailsApiService = {
     getTrail(trailId) {
         return fetch(`${config.API_ENDPOINT}/trails/${trailId}`, {
             headers: {
-                'authorization': `bearer ${TokenService.getAuthToken}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
             .then(res => 
@@ -31,7 +31,7 @@ const TrailsApiService = {
     getTraiLComments(trailId) {
         return fetch(`${config.API_ENDPOINT}/trails/${trailId}/comments`, {
             headers: {
-                'authorization': `bearer ${TokenService.getAuthToken}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
             .then(res => 
@@ -44,7 +44,7 @@ const TrailsApiService = {
     getTrailRatings(trailId) {
         return fetch(`${config.API_ENDPOINT}/trails/${trailId}/ratings`, {
             headers: {
-                'authorization': `bearer ${TokenService.getAuthToken}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
             .then(res => {
@@ -59,7 +59,7 @@ const TrailsApiService = {
             method: 'POST',
             headers: {
                 'content-type': ' application/json',
-                'authorization': `bearer ${TokenService.getAuthToken}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify({
                 content
@@ -77,7 +77,7 @@ const TrailsApiService = {
             method: 'POST',
             headers: {
                 'content-type': ' application/json',
-                'authorization': `bearer ${TokenService.getAuthToken}`
+                'authorization': `bearer ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify({
                 rating
