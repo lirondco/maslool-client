@@ -6,7 +6,7 @@ import AllTrailsContext from '../../contexts/AllTrailsContext'
 import './TrailSearch.css'
 
 export default class TrailSearch extends Component {
-    state = { 
+    state = {
         searchActive: true
     }
 
