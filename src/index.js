@@ -7,17 +7,20 @@ import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './contexts/UserContext';
 import { TrailProvider } from './contexts/TrailContext';
 import { AllTrailsProvider } from './contexts/AllTrailsContext';
+import ErrorComponent from './components/ErrorComponent/ErrorComponent';
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <TrailProvider>
-      <AllTrailsProvider>
-        <UserProvider>
-          <App />
-        </UserProvider>
-      </AllTrailsProvider>
-    </TrailProvider>
+      <TrailProvider>
+        <AllTrailsProvider>
+          <UserProvider>
+          <ErrorComponent>
+            <App />
+            </ErrorComponent>
+          </UserProvider>
+        </AllTrailsProvider>
+      </TrailProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

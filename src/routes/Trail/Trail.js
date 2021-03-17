@@ -5,7 +5,7 @@ import StarRatings from 'react-star-ratings'
 import  './Trail.css'
 import { Link } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
-import eachDayOfInterval from 'date-fns/eachDayOfInterval/index'
+import NotFound from '../../components/NotFound/NotFound'
 
 export default class Trail extends Component {
     static defaultProps = {
@@ -26,15 +26,7 @@ export default class Trail extends Component {
     }
 
     renderTrail = () => {
-        const { trail, error } = this.context
-        console.log(this.context, " context ")
-        if (!trail) {
-            return <Loading />
-        }
-
-        if (!error) {
-            
-        }
+        const { trail } = this.context
         return <>
             <h2>{trail.name}</h2>
             <hr />
@@ -46,9 +38,20 @@ export default class Trail extends Component {
     }
 
     render() {
+        const { trail, error } = this.context
+        let content
+        console.error('sldkjfslkdfjsldkfjsldkfj')
+
+        if (error) {
+            content = <NotFound />
+        } else if (!trail) {
+            content = <Loading />
+        } else {
+            content = this.renderTrail()
+        }
         return (
             <section className='TrailPage'>
-                {this.renderTrail()}
+                {content}
             </section>
         )
     }

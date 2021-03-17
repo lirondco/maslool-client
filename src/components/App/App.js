@@ -14,22 +14,12 @@ import Trail from '../../routes/Trail/Trail'
 import NotFound from '../NotFound/NotFound'
 
 export default class App extends Component {
-  state = { hasError: false }
-
-  static getDerivedStateFromError(error) {
-    console.error(error)
-    return { hasError: true }
-  }
 
   render() {
-    const { hasError } = this.state
     return (
       <div className = 'App'>
         <Header />
         <main>
-          {hasError && (
-            <p>There was an error! Oh no!</p>
-          )}
           <Switch>
             <PublicOnlyRoute 
               path={'/home'}
