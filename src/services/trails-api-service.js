@@ -47,11 +47,11 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-            .then(res => {
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
-            })
+            )
     },
 
     postComment(trailId, content) {
@@ -136,7 +136,25 @@ const TrailsApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : ''
                 )
-    }
+    },
+
+    editRating(ratingId, rating) {
+        return fetch(`${config.API_ENDPOINT}/ratings/${ratingId}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify({
+                rating
+            })
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+            )
+    },
 
 }
 

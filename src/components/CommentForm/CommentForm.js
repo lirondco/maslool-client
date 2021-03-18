@@ -31,8 +31,6 @@ export default class CommentForm extends Component {
                         aria-label='Type a comment...'
                         name='content'
                         id='content'
-                        cols='30'
-                        rows='3'
                         placeholder='Type a comment...'
                     />
                 </div>

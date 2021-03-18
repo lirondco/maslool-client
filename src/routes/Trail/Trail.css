@@ -71,7 +71,7 @@ hr {
     border: #644630 bold !important;
 }
 
-.comments_list {
+.comments_list, .ratings_list {
     background-color: #FFFCF5;
     border-radius: 14px;
     border-top: #644630 solid;
@@ -81,6 +81,6 @@ hr {
     box-shadow: 5px 5px 2.5px grey;
 }
 
-.trail_comment_list {
+.trail_comment_list, .trail_rating_list {
     background-color: #FFFCF5;
 }

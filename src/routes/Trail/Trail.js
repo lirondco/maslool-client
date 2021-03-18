@@ -8,6 +8,8 @@ import Loading from '../../components/Loading/Loading'
 import NotFound from '../../components/NotFound/NotFound'
 import Comments from '../../components/Comments/Comments'
 import CommentForm from '../../components/CommentForm/CommentForm'
+import Ratings from '../../components/Ratings/Ratings'
+import RatingForm from '../../components/RatingForm/RatingForm'
 
 export default class Trail extends Component {
     state = {
@@ -23,8 +25,14 @@ export default class Trail extends Component {
 
     loadComments = trailId => {
         TrailsApiService.getTrailComments(trailId)
-        .then(this.context.setComments)
-        .catch(this.context.setError)
+            .then(this.context.setComments)
+            .catch(this.context.setError)
+    }
+
+    loadRatings = trailId => {
+        TrailsApiService.getTrailRatings(trailId)
+            .then(this.context.setRatings)
+            .catch(this.context.setError)
     }
 
     componentDidMount = () => {
@@ -36,26 +44,29 @@ export default class Trail extends Component {
 
     componentWillUnmount() {
         this.context.clearTrail()
-    } 
+    }
 
     renderComments = () => {
         const { trailId } = this.props.match.params
         this.loadComments(trailId)
-        const { comments } = this.context
+        const { comments, trail } = this.context
+
         if (!comments) {
-            return <p className = 'comments_list'>Loading ... </p>
+            return <p className='comments_list'>Loading ... </p>
         }
+
         return (
             <ul className='comments_list'>
-                {comments.map(comment => 
-                <li className='trail_comment_list' key={`${comments.indexOf(comment)}`}>
-                    <Comments 
-                        comment={comment} 
-                        onFlagSuccess={this.handleRerenderComments}
-                        onEditSuccess={this.handleRerenderComments}
-                        onDeleteSuccess={this.handleRerenderComments}
-                    />
-                </li>    
+                {(trail.number_of_comments === 0) ? <li className='trail_comment_list' key='no_comment'>Be the frist to comment! </li> : ''}
+                {comments.map(comment =>
+                    <li className='trail_comment_list' key={`${comment.id}`}>
+                        <Comments
+                            comment={comment}
+                            onFlagSuccess={this.handleRerenderComments}
+                            onEditSuccess={this.handleRerenderComments}
+                            onDeleteSuccess={this.handleRerenderComments}
+                        />
+                    </li>
                 )}
                 <li className='trail_comment_list' key='comment_form'>
                     <CommentForm />
@@ -68,6 +79,28 @@ export default class Trail extends Component {
         this.renderComments()
     }
 
+    renderRatings = () => {
+        const { trailId } = this.props.match.params
+        this.loadRatings(trailId)
+        const { ratings, trail } = this.context
+        if (!ratings) {
+            return <p className='ratings_list'>Loading ... </p>
+        }
+        return (
+            <ul className='ratings_list'>
+                <li className='trail_rating_list' key='set_rating'><RatingForm /></li>
+                {(trail.number_of_ratings === 0) ? <li className='trail_rating_list' key='no_rating'>Be the frist to rate! </li> : ''}
+                {ratings.map(rating =>
+                    <li className='trail_rating_list' key={rating.id}>
+                        <Ratings
+                            rating={rating}
+                        />
+                    </li>
+                )}
+            </ul>
+        )
+
+    }
 
     renderTrail = () => {
         const { trail } = this.context
@@ -83,15 +116,19 @@ export default class Trail extends Component {
     }
 
     handleClickDescription = () => {
-        this.setState({active: null})
+        this.setState({ active: null })
     }
 
     handleClickSafety = () => {
-        this.setState({active: 'safety'})
+        this.setState({ active: 'safety' })
     }
 
     handleClickComments = () => {
-        this.setState({active: 'comments'})
+        this.setState({ active: 'comments' })
+    }
+
+    handleClickRatings = () => {
+        this.setState({ active: 'ratings' })
     }
 
     renderLowerSection = () => {
@@ -103,8 +140,10 @@ export default class Trail extends Component {
             section = <TrailSafety trail={trail} />
         } else if (this.state.active === 'comments') {
             section = this.renderComments()
+        } else if (this.state.active === 'ratings') {
+            section = this.renderRatings()
         }
-         return (
+        return (
             <div className='LowerSection'>
                 <ul className='trailnav'>
                     <li key='description'>
@@ -120,7 +159,7 @@ export default class Trail extends Component {
                         <NavLink
                             activeClassName='active_trailnav'
                             to={`/trails/${trail.id}/safety`}
-                            onClick = {this.handleClickSafety}
+                            onClick={this.handleClickSafety}
                         >
                             Safety
                         </NavLink>
@@ -129,7 +168,7 @@ export default class Trail extends Component {
                         <NavLink
                             activeClassName='active_trailnav'
                             to={`/trails/${trail.id}/comments`}
-                            onClick = {this.handleClickComments}
+                            onClick={this.handleClickComments}
                         >
                             Comments
                         </NavLink>
@@ -138,6 +177,7 @@ export default class Trail extends Component {
                         <NavLink
                             activeClassName='active_trailnav'
                             to={`/trails/${trail.id}/ratings`}
+                            onClick={this.handleClickRatings}
                         >
                             Ratings
                         </NavLink>
@@ -183,7 +223,7 @@ function TrailInfo({ trail }) {
                 starRatedColor='red'
                 starEmptyColor='grey'
             />
-            <p>{trail.rating} of {trail.number_of_ratings} total ratings</p>
+            <p>{trail.rating} from {trail.number_of_ratings} total ratings</p>
         </div>
     )
 }
@@ -199,7 +239,7 @@ function TrailDescription({ trail }) {
 function TrailSafety({ trail }) {
     return (
         <div className='TrailText'>
-            <p className='trail_paragraph'>{trail.safety}</p> 
+            <p className='trail_paragraph'>{trail.safety}</p>
         </div>
     )
 }

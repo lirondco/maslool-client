@@ -106,13 +106,13 @@ export default class Comments extends Component {
                     }
                     <p className='comment_content'>{comment.content}</p>
                     {(comment.flagged === true)
-                        ? <p className='flagged_comment' role='alert'>Comment has been flagged as inappropriate</p>
+                        ? <p className='flagged_comment'>Comment has been flagged as inappropriate</p>
                         : <button className='flag_button' onClick={e => this.handleFlaggedClick(comment, e)}>Flag as inappropriate</button>
                     }</>)
         }
         return (
             <div className='trail_comment'>
-                <h4 className='comment_username'>From: {comment.user.username} {(comment.user.banned) ? '[banned]' : ''}</h4>
+                <h4 className='comment_username'>From: {comment.user.username} {(comment.user.banned) ? '[banned]' : ''}{(comment.user.admin) ? '[moderator]' : ''}</h4>
                 <p className='comment_date'>Last modified: <NiceDate date={comment.last_modified} /></p>
                 {renderedContent}
             </div>
