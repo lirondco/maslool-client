@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TrailContext, { nullTrail } from '../../contexts/TrailContext'
+import TrailContext from '../../contexts/TrailContext'
 import TrailsApiService from '../../services/trails-api-service'
 import StarRatings from 'react-star-ratings'
 import './Trail.css'
@@ -49,7 +49,7 @@ export default class Trail extends Component {
     renderComments = () => {
         const { trailId } = this.props.match.params
         this.loadComments(trailId)
-        const { comments, trail } = this.context
+        const { comments } = this.context
 
         if (!comments) {
             return <p className='comments_list'>Loading ... </p>
@@ -57,7 +57,7 @@ export default class Trail extends Component {
 
         return (
             <ul className='comments_list'>
-                {(trail.number_of_comments === 0) ? <li className='trail_comment_list' key='no_comment'>Be the frist to comment! </li> : ''}
+                {(comments.length === 0) ? <li className='trail_comment_list' key='no_comment'>Be the frist to comment! </li> : ''}
                 {comments.map(comment =>
                     <li className='trail_comment_list' key={`${comment.id}`}>
                         <Comments
@@ -82,14 +82,14 @@ export default class Trail extends Component {
     renderRatings = () => {
         const { trailId } = this.props.match.params
         this.loadRatings(trailId)
-        const { ratings, trail } = this.context
+        const { ratings } = this.context
         if (!ratings) {
             return <p className='ratings_list'>Loading ... </p>
         }
         return (
             <ul className='ratings_list'>
                 <li className='trail_rating_list' key='set_rating'><RatingForm /></li>
-                {(trail.number_of_ratings === 0) ? <li className='trail_rating_list' key='no_rating'>Be the frist to rate! </li> : ''}
+                {(ratings.length === 0) ? <li className='trail_rating_list' key='no_rating'>Be the frist to rate! </li> : ''}
                 {ratings.map(rating =>
                     <li className='trail_rating_list' key={rating.id}>
                         <Ratings
