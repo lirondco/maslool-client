@@ -12,6 +12,7 @@ import TokenService from '../../services/token-service'
 import TrailSearch from '../../routes/TrailSearch/TrailSearch'
 import Trail from '../../routes/Trail/Trail'
 import NotFound from '../NotFound/NotFound'
+import ContactAdmin from '../../routes/ContactAdmin/ContactAdmin'
 
 export default class App extends Component {
 
@@ -49,6 +50,10 @@ export default class App extends Component {
             <PrivateOnlyRoute 
               path={'/trails/:trailId'}
               component={Trail}
+            />
+            <PrivateOnlyRoute 
+              path='/contact'
+              component={ContactAdmin}
             />
             <Route 
               component={NotFound}

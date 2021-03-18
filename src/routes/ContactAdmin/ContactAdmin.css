@@ -1,0 +1,19 @@
+.ContactAdmin {
+    margin: 2%;
+    padding: 2%;
+}
+
+.ContactAdmin h4 {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.ContactAdmin h2 {
+    margin-bottom: 1%;
+}
+
+hr {
+    border: 1px solid;
+}
+
