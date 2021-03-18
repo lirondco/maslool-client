@@ -7,6 +7,14 @@
     width: max-content;
 }
 
+.Textarea {
+    padding: 2%;
+    background-color: white;
+    border: #524C57 solid 1px;
+    border-radius: 10px;
+    width: 96%;
+}
+
 .Required {
     color: red;
 }
@@ -27,3 +35,4 @@
 .Button:active {
     background-color: brown;
 }
+

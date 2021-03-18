@@ -6,6 +6,10 @@
     box-shadow: 5px 5px 2.5px grey;
 }
 
+.edit_comment {
+    margin: 0 !important;
+}
+
 .comment_buttons {
     display: flex;
     flex-direction: row;

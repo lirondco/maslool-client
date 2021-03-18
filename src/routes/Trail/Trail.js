@@ -7,6 +7,7 @@ import { Link, NavLink } from 'react-router-dom'
 import Loading from '../../components/Loading/Loading'
 import NotFound from '../../components/NotFound/NotFound'
 import Comments from '../../components/Comments/Comments'
+import CommentForm from '../../components/CommentForm/CommentForm'
 
 export default class Trail extends Component {
     state = {
@@ -41,20 +42,32 @@ export default class Trail extends Component {
         const { trailId } = this.props.match.params
         this.loadComments(trailId)
         const { comments } = this.context
+        if (!comments) {
+            return <p className = 'comments_list'>Loading ... </p>
+        }
         return (
             <ul className='comments_list'>
                 {comments.map(comment => 
                 <li className='trail_comment_list' key={`${comments.indexOf(comment)}`}>
-                    <Comments comment={comment} onFlagSuccess={this.handleFlaggedComment}/>
+                    <Comments 
+                        comment={comment} 
+                        onFlagSuccess={this.handleRerenderComments}
+                        onEditSuccess={this.handleRerenderComments}
+                        onDeleteSuccess={this.handleRerenderComments}
+                    />
                 </li>    
                 )}
+                <li className='trail_comment_list' key='comment_form'>
+                    <CommentForm />
+                </li>
             </ul>
         )
     }
 
-    handleFlaggedComment = () => {
+    handleRerenderComments = () => {
         this.renderComments()
     }
+
 
     renderTrail = () => {
         const { trail } = this.context

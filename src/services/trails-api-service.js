@@ -8,7 +8,7 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-            .then(res => 
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
@@ -21,7 +21,7 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-            .then(res => 
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
@@ -34,7 +34,7 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-            .then(res => 
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
@@ -65,7 +65,7 @@ const TrailsApiService = {
                 content
             })
         })
-            .then(res => 
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
@@ -83,7 +83,7 @@ const TrailsApiService = {
                 rating
             })
         })
-            .then(res => 
+            .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
@@ -98,11 +98,44 @@ const TrailsApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
-        .then(res => 
-            (!res.ok)
-                ? res.json().then(e => Promise.reject(e))
-                : res.json()
-        )
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+
+    editComment(commentId, content) {
+        return fetch(`${config.API_ENDPOINT}/comments/${commentId}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify({
+                content
+            })
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+            )
+    },
+
+    deleteComment(commentId) {
+        return fetch(`${config.API_ENDPOINT}/comments/${commentId}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+                )
     }
 
 }
