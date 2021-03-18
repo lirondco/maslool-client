@@ -13,6 +13,7 @@ hr {
 
 .TrailInfo {
     margin: 2%;
+    margin-bottom: 10%;
 }
 
 .TrailInfo a {
@@ -26,4 +27,60 @@ hr {
 
 .TrailInfo a:visited {
     color: purple;
+}
+
+
+.TrailText {
+    background-color: #FFFCF5;
+    border-radius: 14px;
+    border-top: #644630 solid;
+    padding: 4%;
+    box-shadow: 5px 5px 2.5px grey;
+}
+
+.TrailText p {
+    background-color: inherit;
+    color: #644630;
+}
+
+
+.LowerSection ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1%;
+}
+
+.LowerSection ul li {
+    padding-right: 2%;
+}
+
+.LowerSection ul li a {
+    background-color: #FFFCF5;
+    border-bottom: #FFFCF5 solid !important;
+    border: #644630 solid;
+    padding: 3%;
+    color: #644630;
+    font-weight: bolder;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.active_trailnav {
+    background-color: #644630 !important;
+    color: #FFFCF5 !important; 
+    border: #644630 bold !important;
+}
+
+.comments_list {
+    background-color: #FFFCF5;
+    border-radius: 14px;
+    border-top: #644630 solid;
+    padding: 4%;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 5px 5px 2.5px grey;
+}
+
+.trail_comment_list {
+    background-color: #FFFCF5;
 }

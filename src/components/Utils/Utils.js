@@ -1,6 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
+import { parseISO, format as formatDate } from 'date-fns'
 import './Utils.css'
+
+export function NiceDate({ date, format='dd MMM yyyy' }) {
+  let datedDate = parseISO(date)
+  return formatDate(datedDate, format)
+}
 
 export function Label({ className, ...props }) {
   return (
