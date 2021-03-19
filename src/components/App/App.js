@@ -16,6 +16,7 @@ import ContactAdmin from '../../routes/ContactAdmin/ContactAdmin'
 import UserInfo from '../../routes/UserInfo/UserInfo'
 import AdminOnlyRoute from '../AdminOnlyRoute/AdminOnlyRoute'
 import AddTrail from '../../routes/AddTrail/AddTrail'
+import PendingMessageList from '../../routes/PendingMessageList/PendingMessageList'
 
 export default class App extends Component {
 
@@ -65,6 +66,10 @@ export default class App extends Component {
             <AdminOnlyRoute 
               path='/add_trail'
               component={AddTrail}
+            />
+            <AdminOnlyRoute
+              exact path='/messages'
+              component={PendingMessageList}
             />
             <Route 
               component={NotFound}

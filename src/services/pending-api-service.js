@@ -33,7 +33,38 @@ const PendingApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             ) 
+    },
+
+    getPending(pendingId) {
+        return fetch(`${config.API_ENDPOINT}/pending/${pendingId}`, {
+            method: 'GET',
+            headers: {
+                'content-type': ' application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+
+    deletePending(pendingId) {
+        return fetch(`${config.API_ENDPOINT}/pending/${pendingId}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': ' application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+            )
     }
+
 
 }
 

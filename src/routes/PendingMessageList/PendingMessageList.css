@@ -1,0 +1,18 @@
+.PendingMessageList {
+    margin: 2%;
+    padding: 2%;
+}
+
+.PendingMessageList h2 {
+    margin-bottom: 1%;
+}
+
+hr {
+    border: 1px solid;
+}
+
+.message_list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
