@@ -13,6 +13,7 @@ import TrailSearch from '../../routes/TrailSearch/TrailSearch'
 import Trail from '../../routes/Trail/Trail'
 import NotFound from '../NotFound/NotFound'
 import ContactAdmin from '../../routes/ContactAdmin/ContactAdmin'
+import UserInfo from '../../routes/UserInfo/UserInfo'
 
 export default class App extends Component {
 
@@ -54,6 +55,10 @@ export default class App extends Component {
             <PrivateOnlyRoute 
               path='/contact'
               component={ContactAdmin}
+            />
+            <PrivateOnlyRoute 
+              path='/profile'
+              component={UserInfo}
             />
             <Route 
               component={NotFound}
