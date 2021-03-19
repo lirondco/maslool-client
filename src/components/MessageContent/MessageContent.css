@@ -1,0 +1,30 @@
+.MessageContent {
+    margin: 2% 20% 2% 20%;
+    border: black solid 2px;
+    border-radius: 20px;
+    padding: 3%;
+}
+
+.MessageContent p, .MessageContent span, .MessageContent a {
+    background-color: white;
+}
+
+.MessageContent p {
+    margin: 2%;
+    padding: 1%;
+    border: black solid 1px;
+    border-radius: 20px;
+}
+
+.MessageContent a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.MessageContent a:hover {
+    color: purple;
+}
+
+.MessageContent span {
+    font-weight: bold;
+}
