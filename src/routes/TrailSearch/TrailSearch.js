@@ -36,7 +36,7 @@ export default class TrailSearch extends Component {
                 {searchResult.map(trail => {
                     return (
                         <ul>
-                            <li>
+                            <li key={trail.id}>
                                 <SearchResult
                                     key={trail.id}
                                     id={trail.id}

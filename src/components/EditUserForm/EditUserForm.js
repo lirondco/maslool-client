@@ -48,7 +48,7 @@ export default class EditUserForm extends Component {
             <form type='submit' className='edit_email' onSubmit={this.handleSubmit}>
                 <Label htmlFor='email'>Email: </Label>
                 <Input name='email' id='email' defaultValue={this.state.user.email} />
-                <button>Change</button>
+                <button type='submit'>Change</button>
                 <button onClick={this.handleCancelClick}>Cancel</button>
             </form>
         )

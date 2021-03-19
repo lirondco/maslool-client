@@ -106,7 +106,7 @@ export default class Comments extends Component {
                     }
                     <p className='comment_content'>{comment.content}</p>
                     {(comment.flagged === true)
-                        ? <p className='flagged_comment'>Comment has been flagged as inappropriate</p>
+                        ? <><p className='flagged_comment'>Comment has been flagged as inappropriate</p> {(user.admin === true) ? <button className='flag_button' onClick={e => this.handleFlaggedClick(comment, e)}>Unflag</button> : ''}</>
                         : <button className='flag_button' onClick={e => this.handleFlaggedClick(comment, e)}>Flag as inappropriate</button>
                     }</>)
         }
