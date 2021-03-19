@@ -37,6 +37,7 @@ export default class TrailSearchForm extends Component {
     render() {
         const { allTrails } = this.context
         let uniqueLocations = [...new Set(allTrails.map(trail => trail.location.region))]
+        uniqueLocations.sort()
         const difficulties = ['Beginner', 'Intermediate', 'Advanced']
         const ratings = [1, 2, 3, 4, 5]
 

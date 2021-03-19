@@ -28,6 +28,53 @@ const TrailsApiService = {
             )
     },
 
+    postTrail(newTrail) {
+        return fetch(`${config.API_ENDPOINT}/trails`, {
+            method: 'POST',
+            headers: {
+                'content-type': ' application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(newTrail)
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+
+    editTrail(trailid, query) {
+        return fetch(`${config.API_ENDPOINT}/trails/${trailid}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': ' application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+            body: JSON.stringify(query)
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+            )
+    },
+
+    deleteTrail(trailId) {
+        return fetch(`${config.API_ENDPOINT}/trails/${trailId}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : ''
+                )
+    },
+
     getTrailComments(trailId) {
         return fetch(`${config.API_ENDPOINT}/trails/${trailId}/comments`, {
             headers: {
