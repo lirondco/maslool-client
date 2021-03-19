@@ -7,7 +7,6 @@ import "./MessageRoute.css";
 export default class MessageRoute extends Component {
   state = {
     pending: null,
-    error: null
   };
 
   static defaultProps = {
@@ -15,11 +14,11 @@ export default class MessageRoute extends Component {
   };
 
   componentDidMount = () => {
-    this.setState({ error: 'Loading message ...', pending: null });
+    this.setState({ error: 'Fetching message ...', pending: null });
     const { pendingId } = this.props.match.params;
     PendingApiService.getPending(pendingId)
       .then((pending) => this.setState({ pending, error: null }))
-      .catch((e) => this.setState({ e }));
+      .catch((error) => this.setState({ ...error }));
   };
 
   handleDeleteMessage = () => {
@@ -27,7 +26,7 @@ export default class MessageRoute extends Component {
     const { pendingId } = this.props.match.params;
     PendingApiService.deletePending(pendingId)
       .then(() => this.props.history.goBack())
-      .catch((e) => this.setState({ e }));
+      .catch((error) => this.setState({ error }));
   };
 
   renderMessage = () => {
@@ -37,7 +36,6 @@ export default class MessageRoute extends Component {
 
   render() {
       const { error, pending } = this.state
-      console.log(this.state, ' state ahihihihi')
     return (
       <section className="MessageRoute">
         {(!pending) ? <h2>Loading message...</h2> : <h2>Message from {pending.user.username}</h2>}
