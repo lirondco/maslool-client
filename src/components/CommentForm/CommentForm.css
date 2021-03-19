@@ -1,9 +1,9 @@
 .CommentForm {
-    margin-bottom: 2%;
-    padding: 1%;
-    border: #524C57 solid;
-    border-radius: 10px;
-    box-shadow: 5px 5px 2.5px grey;
-    margin: 0 !important;
-    background-color: lightblue;
+  margin-bottom: 2%;
+  padding: 1%;
+  border: #524c57 solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2.5px grey;
+  margin: 0 !important;
+  background-color: lightblue;
 }

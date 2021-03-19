@@ -1,86 +1,86 @@
 .TrailPage {
-    margin: 2%;
-    padding: 2%;
+  margin: 2%;
+  padding: 2%;
 }
 
 .TrailPage h2 {
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 hr {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .TrailInfo {
-    margin: 2%;
-    margin-bottom: 10%;
+  margin: 2%;
+  margin-bottom: 10%;
 }
 
 .TrailInfo a {
-    text-decoration: underline;
-    color: blue;
+  text-decoration: underline;
+  color: blue;
 }
 
 .TrailInfo a:hover {
-    color: purple;
+  color: purple;
 }
 
 .TrailInfo a:visited {
-    color: purple;
+  color: purple;
 }
 
-
 .TrailText {
-    background-color: #FFFCF5;
-    border-radius: 14px;
-    border-top: #644630 solid;
-    padding: 4%;
-    box-shadow: 5px 5px 2.5px grey;
+  background-color: #fffcf5;
+  border-radius: 14px;
+  border-top: #644630 solid;
+  padding: 4%;
+  box-shadow: 5px 5px 2.5px grey;
 }
 
 .TrailText p {
-    background-color: inherit;
-    color: #644630;
+  background-color: inherit;
+  color: #644630;
 }
 
-
 .LowerSection ul {
-    display: flex;
-    flex-direction: row;
-    padding-left: 1%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 1%;
 }
 
 .LowerSection ul li {
-    padding-right: 2%;
+  padding-right: 2%;
 }
 
 .LowerSection ul li a {
-    background-color: #FFFCF5;
-    border-bottom: #FFFCF5 solid !important;
-    border: #644630 solid;
-    padding: 3%;
-    color: #644630;
-    font-weight: bolder;
-    border-radius: 5px;
-    width: fit-content;
+  background-color: #fffcf5;
+  border-bottom: #fffcf5 solid !important;
+  border: #644630 solid;
+  padding: 3%;
+  color: #644630;
+  font-weight: bolder;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 .active_trailnav {
-    background-color: #644630 !important;
-    color: #FFFCF5 !important; 
-    border: #644630 bold !important;
+  background-color: #644630 !important;
+  color: #fffcf5 !important;
+  border: #644630 bold !important;
 }
 
-.comments_list, .ratings_list {
-    background-color: #FFFCF5;
-    border-radius: 14px;
-    border-top: #644630 solid;
-    padding: 4%;
-    display: flex !important;
-    flex-direction: column !important;
-    box-shadow: 5px 5px 2.5px grey;
+.comments_list,
+.ratings_list {
+  background-color: #fffcf5;
+  border-radius: 14px;
+  border-top: #644630 solid;
+  padding: 4%;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 5px 5px 2.5px grey;
 }
 
-.trail_comment_list, .trail_rating_list {
-    background-color: #FFFCF5;
+.trail_comment_list,
+.trail_rating_list {
+  background-color: #fffcf5;
 }

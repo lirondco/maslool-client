@@ -1,21 +1,21 @@
 .loading {
-    margin: 2%;
-    padding: 2%;
+  margin: 2%;
+  padding: 2%;
 }
 
 .loading h2 {
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 hr {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .loading p {
-    margin-top: 2%;
-    text-align: justify;
+  margin-top: 2%;
+  text-align: justify;
 }
 
 .loading img {
-    width: 100%; 
+  width: 100%;
 }

@@ -1,57 +1,57 @@
 .trail_comment {
-    margin-bottom: 2%;
-    padding: 1%;
-    border: #524C57 solid;
-    border-radius: 10px;
-    box-shadow: 5px 5px 2.5px grey;
+  margin-bottom: 2%;
+  padding: 1%;
+  border: #524c57 solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2.5px grey;
 }
 
 .edit_comment {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .comment_buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .comment_buttons button {
-    margin: 0 !important;
-    border-radius: 10px;
+  margin: 0 !important;
+  border-radius: 10px;
 }
 
 .comment_buttons button:hover {
-    background-color: #FFFCF5;
-    border-color: #999;
+  background-color: #fffcf5;
+  border-color: #999;
 }
 
 .flag_button {
-    margin: 0 !important;
-    border: none;
-    color: red;
-    text-decoration: underline;
+  margin: 0 !important;
+  border: none;
+  color: red;
+  text-decoration: underline;
 }
 
 .flag_button:hover {
-    margin: 0 !important;
-    border: none;
-    color: maroon;
-    text-decoration: underline;
+  margin: 0 !important;
+  border: none;
+  color: maroon;
+  text-decoration: underline;
 }
 
 .flagged_comment {
-    color: red;
+  color: red;
 }
 
 .comment_date {
-    font-style: italic;
+  font-style: italic;
 }
 
 .comment_content {
-    padding: 2%;
-    background-color: white;
-    border: #524C57 solid 1px;
-    border-radius: 10px;
-    margin: 1%;
+  padding: 2%;
+  background-color: white;
+  border: #524c57 solid 1px;
+  border-radius: 10px;
+  margin: 1%;
 }

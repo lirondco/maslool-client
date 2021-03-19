@@ -1,20 +1,21 @@
-import React, { Component } from 'react'
-import './MessageContent.css'
+import React, { Component } from "react";
+import "./MessageContent.css";
 
 export default class MessageContent extends Component {
-    static defaultProps = {
-        onDeleteClick: () => {}
-    }
+  static defaultProps = {
+    onDeleteClick: () => {},
+  };
 
-    render() {
-        const pending = this.props.pending
+  render() {
+    const pending = this.props.pending;
 
-        return ( <
-            div className = 'MessageContent' >
-            <
-            p > From: < span > { pending.user.username } < /span></p >
-            <
-            /div>
-        )
-    }
+    return (
+      <div className="MessageContent">
+        <p>
+          {" "}
+          From: <span> {pending.user.username} </span>
+        </p>
+      </div>
+    );
+  }
 }

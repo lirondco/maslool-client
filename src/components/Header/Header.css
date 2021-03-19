@@ -1,78 +1,80 @@
 header {
-    background-color: #374355;
-    text-align: center;
+  background-color: #374355;
+  text-align: center;
 }
 
 .logo_image {
-    width: 100%;
-    border: none;
-    vertical-align: top;
+  width: 100%;
+  border: none;
+  vertical-align: top;
 }
 
 @media screen and (min-width: 500px) {
-    header {
-        display: flex;
-        justify-content: left !important;
-        flex-direction: row;
-        text-align: left !important;
-        background-color: #374355;
-    }
+  header {
+    display: flex;
+    justify-content: left !important;
+    flex-direction: row;
+    text-align: left !important;
+    background-color: #374355;
+  }
 
-    .login_links, .authorised_links {
-        background-color: #374355;
-        display: flex;
-        justify-content: left !important;
-        flex: 10;
-        font-size: medium !important;
-    }
-    
-    .header_logo {
-        flex: 6;
-        background-color: #374355;
-        margin-right: -30%;
-    }
+  .login_links,
+  .authorised_links {
+    background-color: #374355;
+    display: flex;
+    justify-content: left !important;
+    flex: 10;
+    font-size: medium !important;
+  }
 
-    .logo_image {
-        width: 30%;
-        border: none;
-        vertical-align: top;
-    }
+  .header_logo {
+    flex: 6;
+    background-color: #374355;
+    margin-right: -30%;
+  }
+
+  .logo_image {
+    width: 30%;
+    border: none;
+    vertical-align: top;
+  }
 }
 
 .header_logo {
-    border: none;
-    text-decoration: none;
+  border: none;
+  text-decoration: none;
 }
 
 .login_links {
-    background-color: #374355;
-    display: flex;
-    justify-content: center;
+  background-color: #374355;
+  display: flex;
+  justify-content: center;
 }
 
 .authorised_links {
-    font-size: small;
-    background-color: #374355;
-    display: flex;  
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+  font-size: small;
+  background-color: #374355;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.login_links a, .authorised_links a{
-    background-color: inherit;
-    color: #F3F4F5;
-    margin: 1% 3% 1% 3%;
+.login_links a,
+.authorised_links a {
+  background-color: inherit;
+  color: #f3f4f5;
+  margin: 1% 3% 1% 3%;
 }
 
-.login_links a:hover, .authorised_links a:hover {
-    color: #F9D4BF;
-    text-decoration: underline;
+.login_links a:hover,
+.authorised_links a:hover {
+  color: #f9d4bf;
+  text-decoration: underline;
 }
 
 .active_nav {
-    color: #F9D4BF !important;
-    font-weight: bolder;
-    text-decoration: underline;
+  color: #f9d4bf !important;
+  font-weight: bolder;
+  text-decoration: underline;
 }
-

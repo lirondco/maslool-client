@@ -1,17 +1,17 @@
 .welcome {
-    margin: 2%;
-    padding: 2%;
+  margin: 2%;
+  padding: 2%;
 }
 
 .welcome h2 {
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 hr {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .welcome p {
-    margin-top: 2%;
-    text-align: justify;
+  margin-top: 2%;
+  text-align: justify;
 }

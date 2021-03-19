@@ -1,38 +1,37 @@
 .Input {
-    border-radius: 15px;
-    background-color: #FFFCF5;
-    color: #374355;
-    border-style: solid;
-    border-width: 2px;
-    width: max-content;
+  border-radius: 15px;
+  background-color: #fffcf5;
+  color: #374355;
+  border-style: solid;
+  border-width: 2px;
+  width: max-content;
 }
 
 .Textarea {
-    padding: 2%;
-    background-color: white;
-    border: #524C57 solid 1px;
-    border-radius: 10px;
-    width: 96%;
+  padding: 2%;
+  background-color: white;
+  border: #524c57 solid 1px;
+  border-radius: 10px;
+  width: 96%;
 }
 
 .Required {
-    color: red;
+  color: red;
 }
 
 .Button {
-    border-radius: 8px;
-    background-color: #524C57;
-    color: #fff;
-    font-weight: bolder;
-    font-size: 12pt;
-    padding: 4px 20px;
+  border-radius: 8px;
+  background-color: #524c57;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 12pt;
+  padding: 4px 20px;
 }
 
 .Button:disabled {
-    background-color: gray;
+  background-color: gray;
 }
 
 .Button:active {
-    background-color: brown;
+  background-color: brown;
 }
-
