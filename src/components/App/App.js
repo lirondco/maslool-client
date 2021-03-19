@@ -18,6 +18,7 @@ import AdminOnlyRoute from "../AdminOnlyRoute/AdminOnlyRoute";
 import AddTrail from "../../routes/AddTrail/AddTrail";
 import PendingMessageList from "../../routes/PendingMessageList/PendingMessageList";
 import MessageRoute from "../../routes/MessageRoute/MessageRoute";
+import FlaggedCommentList from "../../routes/FlaggedCommentList/FlaggedCommentList";
 
 export default class App extends Component {
   render() {
@@ -45,7 +46,8 @@ export default class App extends Component {
               path="/messages"
               component={PendingMessageList}
             />
-            <AdminOnlyRoute path='/messages/:pendingId' component={MessageRoute}/>
+            <AdminOnlyRoute path='/messages/:pendingId' component={MessageRoute} />
+            <AdminOnlyRoute path='/alerts' component={FlaggedCommentList} />
             <Route component={NotFound} />
           </Switch>
         </main>

@@ -1,0 +1,18 @@
+.flagged_comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.FlaggedCommentList {
+  margin: 2%;
+  padding: 2%;
+}
+
+.FlaggedCommentList h2 {
+  margin-bottom: 1%;
+}
+
+hr {
+  border: 1px solid;
+  margin-bottom: 4%;
+}

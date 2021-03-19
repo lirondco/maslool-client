@@ -32,6 +32,6 @@
   background-color: gray;
 }
 
-.Button:active {
+.Button:active, .Button:hover {
   background-color: brown;
 }
