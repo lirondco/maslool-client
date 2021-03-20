@@ -55,7 +55,7 @@ export default class Header extends Component {
     return (
       <div className="authorised_links">
         <NavLink activeClassName="active_nav" className="leftNav" to="/welcome">
-          SITE RULES
+          {(this.context.user.admin) ? 'STAFF RULES' : 'RULES'}
         </NavLink>
         <NavLink activeClassName="active_nav" className="leftNav" to="/trails">
           TRAILS

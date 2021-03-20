@@ -7,31 +7,32 @@ export default class Home extends Component {
       <section className="home">
         <h2>Welcome to Maslool</h2>
         <hr />
+        <h4>Who we are:</h4>
         <p>
-          Test user: create your own account! Then rate, post a comment, send a message to admin, flag comments, etc.
-          Test admin: thinkful_admin pw: ThinkfulAdmin1!
-          Banned test user: thinkful_banned pw: IamBanned1!
-
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut
-          perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-          inventore veritatis et quasi architecto beatae vitae dicta sunt
-          explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-          quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-          voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-          ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-          consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
-          velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
-          fugiat quo voluptas nulla pariatur?
+          Maslool is the Hebrew word for 'path', like the path we take when
+          exploring the nature in places that are new to us. We strive to be the
+          home of a close-knit community of adventure seekers who want to
+          experience more out of our own natural environment. Currently, we have
+          a list of some trails that our developer and her friends have
+          personally visited, and we plan to add more as we grow. Currently, you
+          can search through our list of trails and write a comment, add a
+          rating, and submit suggestions to our staff. We plan to add more
+          features in the future as we grow, so please feel free to contact us
+          once you're logged in with your ideas and suggestions!
+        </p>
+        <br />
+        <p>
+          Register now, or if you're already registered, log in to experience
+          what we have to offer. If you're a new user, you will be redirected to
+          a page explaining our house rules and we appreciate if you'd abide by
+          them in order to keep a warm and respectful community. Thank you and
+          have a great adventure!
+        </p>
+        <p>
+          Thinkful staff: I am going to submit a separate gist containing two different types of
+          users that you can use to test our functionality: an admin, and a banned user.
+          Feel free to register a new user using test credentials to experience what new users would
+          normally experience. 
         </p>
       </section>
     );
