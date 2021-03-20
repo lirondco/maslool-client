@@ -58,7 +58,7 @@ export default class Trail extends Component {
       <ul className="comments_list">
         {comments.length === 0 ? (
           <li className="trail_comment_list" key="no_comment">
-            Be the frist to comment!{" "}
+            Be the first to comment!{" "}
           </li>
         ) : (
           ""
@@ -98,7 +98,7 @@ export default class Trail extends Component {
         </li>
         {ratings.length === 0 ? (
           <li className="trail_rating_list" key="no_rating">
-            Be the frist to rate!{" "}
+            Be the first to rate!{" "}
           </li>
         ) : (
           ""
@@ -255,7 +255,7 @@ function TrailDescription({ trail }) {
 function TrailSafety({ trail }) {
   return (
     <div className="TrailText">
-      <p className="trail_paragraph">{trail.safety}</p>
+      {(trail.safety) ? <p className="trail_paragraph">{trail.safety}</p> : <p className="trail_paragraph">There's currently no safety information for this trail. It does not mean that there's no safety advisory for this trail at all. Please always check local advisories before and during your trip. </p>}
     </div>
   );
 }

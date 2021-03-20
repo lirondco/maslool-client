@@ -8,6 +8,10 @@ export default class Home extends Component {
         <h2>Welcome to Maslool</h2>
         <hr />
         <p>
+          Test user: create your own account! Then rate, post a comment, send a message to admin, flag comments, etc.
+          Test admin: thinkful_admin pw: ThinkfulAdmin1!
+          Banned test user: thinkful_banned pw: IamBanned1!
+
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -40,7 +40,7 @@ export default class ContactForm extends Component {
           </Label>
           <Textarea required id="contact_form_message" name="message" />
           <Button>Submit Message</Button>
-          <div role="alert">{error && <p className="error">{error}</p>}</div>
+          <div role="alert">{error && <p className="error">{error.error}</p>}</div>
         </form>
       </>
     );

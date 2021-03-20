@@ -55,7 +55,7 @@ export default class Header extends Component {
     return (
       <div className="authorised_links">
         <NavLink activeClassName="active_nav" className="leftNav" to="/welcome">
-          WELCOME
+          SITE RULES
         </NavLink>
         <NavLink activeClassName="active_nav" className="leftNav" to="/trails">
           TRAILS
