@@ -28,10 +28,11 @@
   padding: 4px 20px;
 }
 
-.Button:disabled {
-  background-color: gray;
+.Button:disabled, .Button:hover:disabled {
+  background-color: #ccc;
 }
 
 .Button:active, .Button:hover {
   background-color: brown;
 }
+

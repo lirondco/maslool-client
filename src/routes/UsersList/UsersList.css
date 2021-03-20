@@ -1,0 +1,16 @@
+.UsersList {
+  margin: 2%;
+  padding: 2%;
+}
+
+.UsersList h2 {
+  margin-bottom: 1%;
+}
+
+hr {
+  border: 1px solid;
+}
+
+.UsersList label {
+    font-size: larger;
+}
