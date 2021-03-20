@@ -10,7 +10,9 @@ export default class FlaggedComment extends Component {
 
     handleBanClick = ev => {
         ev.preventDefault()
-        window.confirm('Are you sure you want to do this?')
+        if (!window.confirm('Are you sure you want to do this?')) {
+            return
+        }
         this.props.onBanClick()
     }
 

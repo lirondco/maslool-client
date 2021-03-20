@@ -247,7 +247,7 @@ function TrailInfo({ trail }) {
 function TrailDescription({ trail }) {
   return (
     <div className="TrailText">
-      <p className="trail_paragraph">{trail.description}</p>
+      <p className="trail_paragraph" style={{whiteSpace: "pre-wrap"}} >{trail.description}</p>
     </div>
   );
 }
@@ -255,7 +255,7 @@ function TrailDescription({ trail }) {
 function TrailSafety({ trail }) {
   return (
     <div className="TrailText">
-      {(trail.safety) ? <p className="trail_paragraph">{trail.safety}</p> : <p className="trail_paragraph">There's currently no safety information for this trail. It does not mean that there's no safety advisory for this trail at all. Please always check local advisories before and during your trip. </p>}
+      {(trail.safety) ? <p className="trail_paragraph" style={{whiteSpace: "pre-wrap"}}>{trail.safety}</p> : <p className="trail_paragraph">There's currently no safety information for this trail. It does not mean that there's no safety advisory for this trail at all. Please always check local advisories before and during your trip. </p>}
     </div>
   );
 }

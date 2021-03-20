@@ -18,6 +18,18 @@
     background-color: #f3f4f5;
     margin-right: 1% !important;
   }
+
+  .PendingMessage button:hover {
+    border-radius: 10px;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    margin-right: 1% !important;
+  }
+
   .outer_item {
     background-color: #fae5cf;
     border-radius: 10px;

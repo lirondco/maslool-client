@@ -9,6 +9,9 @@ export default class MessageContent extends Component {
 
     handleDeleteClick = ev => {
         ev.preventDefault()
+        if (!window.confirm('Are you sure you want to do this?')) {
+            return
+        }
         this.props.onDeleteClick()
     }
 
@@ -21,7 +24,7 @@ export default class MessageContent extends Component {
             <div className='MessageContent'>
                 <p>From: <span>{pending.user.username}</span></p>
                 <p>Message user: <span><a href={`mailto: ${pending.user.email}`}>{pending.user.email}</a></span></p>
-                <p>{pending.message}</p>
+                <p style={{whiteSpace: "pre-wrap"}}>{pending.message}</p>
                 <Button type='button' onClick={this.handleDeleteClick}>Delete Message</Button>
             </div>
         )

@@ -124,7 +124,7 @@ export default class Comments extends Component {
           {user.id === comment.user.id || user.admin === true
             ? this.renderButtons(comment)
             : ""}
-          <p className="comment_content">{comment.content}</p>
+          <p className="comment_content" style={{whiteSpace: "pre-wrap"}}>{comment.content}</p>
           {comment.flagged === true ? (
             <>
               <p className="flagged_comment">

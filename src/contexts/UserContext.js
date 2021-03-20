@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import AuthApiService from "../services/auth-api-service";
 import TokenService from "../services/token-service";
-import IdleService from "../services/idle-service";
 
 const UserContext = React.createContext({
   user: {},
@@ -30,11 +29,9 @@ export class UserProvider extends Component {
       };
 
     this.state = state;
-    IdleService.setIdleCallback(this.logoutBecauseIdle);
   }
 
   componentWillUnmount() {
-    IdleService.unRegisterIdleResets();
     TokenService.clearCallbackBeforeExpiry();
   }
 
@@ -59,7 +56,6 @@ export class UserProvider extends Component {
       admin: jwtPayload.admin,
       username: jwtPayload.sub,
     });
-    IdleService.regiserIdleTimerResets();
     TokenService.queueCallbackBeforeExpiry(() => {
       this.fetchRefreshToken();
     });
@@ -68,14 +64,12 @@ export class UserProvider extends Component {
   processLogout = () => {
     TokenService.clearAuthToken();
     TokenService.clearCallbackBeforeExpiry();
-    IdleService.unRegisterIdleResets();
     this.setUser({});
   };
 
   logoutBecauseIdle = () => {
     TokenService.clearAuthToken();
     TokenService.clearCallbackBeforeExpiry();
-    IdleService.unRegisterIdleResets();
     this.setUser({ idle: true });
   };
 

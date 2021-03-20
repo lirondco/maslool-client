@@ -56,7 +56,7 @@ export default class ContactForm extends Component {
           file. Here's your message:
         </p>
         <div className="contact_form">
-          <p className="contact_form_message">{this.state.message}</p>
+          <p className="contact_form_message" style={{whiteSpace: "pre-wrap"}}>{this.state.message}</p>
         </div>
       </>
     );

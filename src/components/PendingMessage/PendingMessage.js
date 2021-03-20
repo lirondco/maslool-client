@@ -9,12 +9,15 @@ export default class PendingMessage extends Component {
 
   handleDeleteClick = (ev) => {
     ev.preventDefault();
+    if (!window.confirm('Are you sure you want to do this?')) {
+      return
+  }
     this.props.onDeleteClick();
   };
 
   render() {
     const pending = this.props.pending;
-    
+
     return (
       <div className="PendingMessage">
         <button aria-label="delete" onClick={this.handleDeleteClick}>
