@@ -20,6 +20,7 @@ import PendingMessageList from "../../routes/PendingMessageList/PendingMessageLi
 import MessageRoute from "../../routes/MessageRoute/MessageRoute";
 import FlaggedCommentList from "../../routes/FlaggedCommentList/FlaggedCommentList";
 import UsersList from "../../routes/UsersList/UsersList";
+import Attribution from "../Attribution/Attribution";
 
 export default class App extends Component {
   render() {
@@ -53,6 +54,7 @@ export default class App extends Component {
             <Route component={NotFound} />
           </Switch>
         </main>
+        <Attribution />
       </div>
     );
   }

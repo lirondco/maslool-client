@@ -1,0 +1,23 @@
+.attribution {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+}
+
+.attribution, .attribution p, .attribution a {
+    background-color: #374355;
+    color: #f3f4f5;
+    font-size: xx-small;
+}
+
+.attribution a {
+    color: #f9d4bf !important;
+    font-weight: bold !important;
+}
+
