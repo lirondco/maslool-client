@@ -28,12 +28,13 @@ export default class TrailSearch extends Component {
 
   renderResults = () => {
     const { searchResult } = this.context;
+    const sortedResult = searchResult.sort((a, b) => a.name > b.name ? 1 : -1)
     return (
       <>
         <Link to="#" onClick={this.handleBackClick}>
           <h3>{"<"} Back to Search</h3>
         </Link>
-        {searchResult.map((trail) => {
+        {sortedResult.map((trail) => {
           return (
             <ul>
               <li key={trail.id}>
