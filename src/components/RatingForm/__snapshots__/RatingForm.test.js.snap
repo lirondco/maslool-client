@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RatingForm component renders the complete form 1`] = `
+<div
+  className="RatingForm"
+>
+  <p>
+    Your Rating:
+  </p>
+  <StarRatings
+    changeRating={[Function]}
+    gradientPathName=""
+    ignoreInlineStyles={false}
+    name="rating"
+    numberOfStars={5}
+    rating={0}
+    starDimension="30px"
+    starEmptyColor="grey"
+    starHoverColor="rgb(230, 67, 47)"
+    starRatedColor="red"
+    starSpacing="15px"
+    svgIconPath="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+    svgIconViewBox="0 0 51 48"
+    typeOfWidget="Star"
+  />
+</div>
+`;

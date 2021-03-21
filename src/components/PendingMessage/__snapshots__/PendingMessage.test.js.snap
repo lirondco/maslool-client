@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PendingMessage component renders the message given props 1`] = `
+<div
+  className="PendingMessage"
+>
+  <button
+    aria-label="delete"
+    onClick={[Function]}
+  >
+    x
+  </button>
+  <p
+    className="outer_item"
+  >
+    From: 
+    <span>
+      test_user
+    </span>
+  </p>
+  <p
+    className="inner_item"
+  >
+    Content:
+     
+    <Link
+      to="/messages/9"
+    >
+      <span>
+        This is a message
+         ... click to see more
+      </span>
+    </Link>
+  </p>
+  <p
+    className="outer_item"
+  >
+    Contact:
+     
+    <span>
+      <a
+        href="mailto:test@user.no"
+      >
+        test@user.no
+      </a>
+    </span>
+  </p>
+</div>
+`;

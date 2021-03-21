@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders the footer 1`] = `
+<header>
+  <Link
+    className="header_logo"
+    to="/home"
+  >
+    <img
+      alt="logo of the website"
+      className="logo_image"
+      src="maslool_header.png"
+    />
+  </Link>
+  <div
+    className="login_links"
+  >
+    <NavLink
+      activeClassName="active_nav"
+      to="/home"
+    >
+      HOME
+    </NavLink>
+    <NavLink
+      activeClassName="active_nav"
+      to="/join"
+    >
+      REGISTER
+    </NavLink>
+    <NavLink
+      activeClassName="active_nav"
+      to="/login"
+    >
+      LOGIN
+    </NavLink>
+  </div>
+</header>
+`;

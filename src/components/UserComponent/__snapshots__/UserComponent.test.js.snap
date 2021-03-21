@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserComponent renders the component given props 1`] = `
+<div
+  className="UserComponent"
+>
+  <h4>
+    testuser
+  </h4>
+  <p
+    className="join_date"
+  >
+    Joined 
+    <NiceDate
+      date="2021-03-11T06:47:06.477Z"
+    />
+  </p>
+  <p>
+    <a
+      href="mailto:test@ema.il"
+    >
+      test@ema.il
+    </a>
+  </p>
+  <ForwardRef
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    Ban User
+  </ForwardRef>
+</div>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResult component renders a search result 1`] = `
+<div
+  className="search_result"
+>
+  <Link
+    to="/trails/undefined"
+  >
+    <h4>
+      test name
+    </h4>
+  </Link>
+  <StarRatings
+    changeRating={null}
+    gradientPathName=""
+    ignoreInlineStyles={false}
+    numberOfStars={5}
+    rating={4}
+    starDimension="15px"
+    starEmptyColor="grey"
+    starHoverColor="rgb(230, 67, 47)"
+    starRatedColor="red"
+    starSpacing="5px"
+    svgIconPath="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+    svgIconViewBox="0 0 51 48"
+    typeOfWidget="Star"
+  />
+  <p>
+    Location: 
+    111 Test St
+     
+    Test Town
+    ,
+     
+    Massachutests
+     
+    11111
+  </p>
+  <p>
+    Difficulty: 
+    Beginner
+  </p>
+</div>
+`;

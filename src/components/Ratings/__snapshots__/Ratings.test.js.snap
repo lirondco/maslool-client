@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ratings component renders the rating given props 1`] = `
+<div
+  className="trail_rating"
+>
+  <h4
+    className="rating_username"
+  >
+    From: 
+    test_user
+     
+  </h4>
+  <div
+    className="rating_content"
+  >
+    <StarRatings
+      changeRating={null}
+      gradientPathName=""
+      ignoreInlineStyles={false}
+      numberOfStars={5}
+      rating={3}
+      starDimension="20px"
+      starEmptyColor="grey"
+      starHoverColor="rgb(230, 67, 47)"
+      starRatedColor="red"
+      starSpacing="5px"
+      svgIconPath="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+      svgIconViewBox="0 0 51 48"
+      typeOfWidget="Star"
+    />
+  </div>
+  <p
+    className="rating_date"
+  >
+    modified: 
+    <NiceDate
+      date="2021-03-11T06:47:06.477Z"
+    />
+  </p>
+</div>
+`;

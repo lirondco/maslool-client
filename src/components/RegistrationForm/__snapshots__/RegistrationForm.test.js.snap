@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationForm component renders the form 1`] = `
+<Fragment>
+  <h2>
+    Register
+  </h2>
+  <hr />
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="main_reg_form"
+    >
+      <Label
+        htmlFor="registration-username-input"
+      >
+        Username: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="registration-username-input"
+        name="username"
+        required={true}
+      />
+      <Label
+        htmlFor="registration-password-input"
+      >
+        Password: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="registration-password-input"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+      />
+      <Label
+        htmlFor="registration-verify-password-input"
+      >
+        Repeat Password: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="registration-verify-password-input"
+        name="verify-password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+      />
+      <Label
+        htmlFor="registration-email-input"
+      >
+        Email Address: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="registration-email-input"
+        name="email"
+        required={true}
+      />
+    </div>
+    <div
+      role="alert"
+    />
+    <footer>
+      <ForwardRef
+        disabled={true}
+        type="submit"
+      >
+        Register
+      </ForwardRef>
+       
+      <br />
+      <Link
+        to="/login"
+      >
+        Already have an account?
+      </Link>
+    </footer>
+  </form>
+</Fragment>
+`;

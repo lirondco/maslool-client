@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils components Input renders when called 1`] = `
+<input
+  className="Input test-class-name"
+  data-other="test-other-prop"
+  type="text"
+>
+  <p>
+    test children
+  </p>
+</input>
+`;
+
+exports[`Utils components Label renders when called 1`] = `
+<label
+  className="Label test-class-name"
+  data-other="test-other-prop"
+>
+  <p>
+    test children
+  </p>
+</label>
+`;
+
+exports[`Utils components Required renders when called 1`] = `
+<span
+  className="Required test-class-name"
+  data-other="test-other-prop"
+>
+  *
+</span>
+`;
+
+exports[`Utils components Textarea renders when called 1`] = `
+<textarea
+  className="Textarea test-class-name"
+  data-other="test-other-prop"
+>
+  <p>
+    test children
+  </p>
+</textarea>
+`;
+
+exports[`Utils components reders a button when called 1`] = `
+<button
+  className="Button test-class-name"
+  data-other="test-other-prop"
+>
+  <p>
+    test children
+  </p>
+</button>
+`;
+
+exports[`Utils components renders a date when NiceDate is called 1`] = `"10 Mar 2021"`;

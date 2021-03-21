@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditTrailForm component renders the form 1`] = `
+<div
+  className="EditTrailForm"
+>
+  <form
+    className="load_trail"
+    onSubmit={[Function]}
+    type="submit"
+  >
+    <span
+      className="select_trail"
+    >
+      <Label
+        htmlFor="edit_trail_select"
+      >
+        Select trail to edit: 
+      </Label>
+      <select
+        id="edit_trail_select"
+        name="trailId"
+      >
+        <option
+          key="1"
+          value={1}
+        >
+          test
+        </option>
+      </select>
+    </span>
+    <ForwardRef
+      type="submit"
+    >
+      Load Trail
+    </ForwardRef>
+    <ForwardRef
+      onClick={[Function]}
+    >
+      Cancel Edit
+    </ForwardRef>
+  </form>
+  <p
+    className="conditional_text"
+  >
+    Please select a trail to edit.
+  </p>
+</div>
+`;

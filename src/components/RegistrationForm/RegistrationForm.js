@@ -69,7 +69,7 @@ export default class RegistrationForm extends Component {
   };
 
   componentDidMount() {
-    this.firstInput.current.focus();
+    if (process.env.NODE_ENV !== "test") this.firstInput.current.focus();
   }
 
   componentWillUnmount() {

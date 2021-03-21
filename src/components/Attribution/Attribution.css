@@ -3,21 +3,24 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     padding-top: 5px;
 }
 
-.attribution, .attribution p, .attribution a {
+.attribution, .attribution p, .attribution .separate_link {
     background-color: #374355;
     color: #f3f4f5;
     font-size: xx-small;
+    padding-left: 2%;
+    padding-right: 2%
 }
 
 .attribution a {
     color: #f9d4bf !important;
     font-weight: bold !important;
+    background-color: #374355;
 }
 

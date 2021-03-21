@@ -21,7 +21,7 @@ export default class NewTrailForm extends Component {
   firstInput = React.createRef();
 
   componentDidMount() {
-    this.firstInput.current.focus();
+    if (process.env.NODE_ENV !== "test") this.firstInput.current.focus();
   }
 
   handleSubmit = (ev) => {

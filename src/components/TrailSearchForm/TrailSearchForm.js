@@ -28,7 +28,7 @@ export default class TrailSearchForm extends Component {
   };
 
   componentDidMount = () => {
-    this.firstInput.current.focus();
+    if (process.env.NODE_ENV !== "test") this.firstInput.current.focus();
     this.context.clearError();
     TrailsApiService.searchTrails("")
       .then(this.context.setAllTrails)

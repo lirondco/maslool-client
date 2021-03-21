@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentForm component renders the complete form 1`] = `
+<form
+  className="CommentForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="content"
+  >
+    <Textarea
+      aria-label="Type a comment..."
+      id="content"
+      name="content"
+      placeholder="Type a comment..."
+      required={true}
+    />
+  </div>
+  <ForwardRef
+    type="submit"
+  >
+    Post Comment
+  </ForwardRef>
+</form>
+`;

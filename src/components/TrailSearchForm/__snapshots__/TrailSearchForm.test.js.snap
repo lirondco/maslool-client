@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrailSearchForm component renders the form 1`] = `
+<div
+  className="TrailSearchForm"
+>
+  <h3>
+    Search for your next hike
+  </h3>
+  <form
+    className="search_form"
+    onSubmit={[Function]}
+  >
+    <Label
+      htmlFor="search_box"
+    >
+      Search by name:
+    </Label>
+    <ForwardRef
+      id="search_box"
+      name="search"
+    />
+    <Label
+      htmlFor="location_search"
+    >
+      Search by location:
+    </Label>
+    <select
+      id="location_search"
+      name="location"
+    >
+      <option
+        value=""
+      >
+        Any
+      </option>
+      <option
+        key="pennsylvania"
+        value="pennsylvania"
+      >
+        Pennsylvania
+      </option>
+    </select>
+    <Label
+      htmlFor="difficulty_search"
+    >
+      Search by difficulty:
+    </Label>
+    <select
+      id="difficulty_search"
+      name="difficulty"
+    >
+      <option
+        value=""
+      >
+        Any
+      </option>
+      <option
+        key="beginner"
+        value="beginner"
+      >
+        Beginner
+      </option>
+      <option
+        key="intermediate"
+        value="intermediate"
+      >
+        Intermediate
+      </option>
+      <option
+        key="advanced"
+        value="advanced"
+      >
+        Advanced
+      </option>
+    </select>
+    <Label
+      htmlFor="rating_saerch"
+    >
+      Search by minimum rating:
+    </Label>
+    <select
+      id="rating_search"
+      name="rating"
+    >
+      <option
+        value={0}
+      >
+        Any
+      </option>
+      <option
+        key="1"
+        value={1}
+      >
+        1
+      </option>
+      <option
+        key="2"
+        value={2}
+      >
+        2
+      </option>
+      <option
+        key="3"
+        value={3}
+      >
+        3
+      </option>
+      <option
+        key="4"
+        value={4}
+      >
+        4
+      </option>
+      <option
+        key="5"
+        value={5}
+      >
+        5
+      </option>
+    </select>
+    <p
+      className="leave_fields_text"
+    >
+      Leave fields blank to return all.
+    </p>
+    <ForwardRef
+      type="submit"
+    >
+      Search
+    </ForwardRef>
+    <div
+      role="alert"
+    />
+  </form>
+</div>
+`;

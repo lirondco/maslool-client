@@ -42,7 +42,8 @@ export default class LoginForm extends Component {
   };
 
   componentDidMount() {
-    this.firstInput.current.focus();
+    if (process.env.NODE_ENV !== 'test')
+      this.firstInput.current.focus();
   }
 
   render() {

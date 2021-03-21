@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments component renders a comment 1`] = `
+<div
+  className="trail_comment"
+>
+  <h4
+    className="comment_username"
+  >
+    From: 
+    test_user
+     
+  </h4>
+  <p
+    className="comment_date"
+  >
+    Last modified: 
+    <NiceDate
+      date="2021-03-18T15:30:29.873Z"
+    />
+  </p>
+  <div
+    className="comment_buttons"
+  >
+    <button
+      className="edit_comment_button"
+      onClick={[Function]}
+    >
+      Edit
+    </button>
+    <button
+      className="delete_comment_button"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+  <p
+    className="comment_content"
+    style={
+      Object {
+        "whiteSpace": "pre-wrap",
+      }
+    }
+  >
+    test comment test comment
+  </p>
+  <p
+    className="flagged_comment"
+  >
+    Comment has been flagged as inappropriate
+  </p>
+   
+</div>
+`;

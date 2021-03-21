@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm component renders the form 1`] = `
+<div
+  className="contact_form"
+>
+  <p>
+    From: 
+    <span
+      className="username_contact"
+    >
+      test_user
+    </span>
+  </p>
+  <form
+    className="contact_form"
+    onSubmit={[Function]}
+    type="submit"
+  >
+    <Label
+      htmlFor="contact_form_message"
+    >
+      Write your message: 
+      <Required />
+    </Label>
+    <Textarea
+      id="contact_form_message"
+      name="message"
+      required={true}
+    />
+    <ForwardRef>
+      Submit Message
+    </ForwardRef>
+    <div
+      role="alert"
+    />
+  </form>
+</div>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component renders the form 1`] = `
+<Fragment>
+  <h2>
+    Sign in
+  </h2>
+  <hr />
+  <form
+    className="LoginForm"
+    onSubmit={[Function]}
+  >
+    <div>
+      <Label
+        htmlFor="login-username-input"
+      >
+        Username:
+      </Label>
+      <ForwardRef
+        id="login-username-input"
+        name="username"
+        required={true}
+      />
+      <Label
+        htmlFor="login-password-input"
+      >
+        Password:
+      </Label>
+      <ForwardRef
+        id="login-password-input"
+        name="password"
+        required={true}
+        type="password"
+      />
+    </div>
+    <div
+      role="alert"
+    />
+    <ForwardRef
+      type="submit"
+    >
+      Sign in
+    </ForwardRef>
+  </form>
+</Fragment>
+`;

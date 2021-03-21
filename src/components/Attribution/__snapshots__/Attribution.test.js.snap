@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attribution component renders the footer 1`] = `
+<footer
+  className="attribution"
+>
+  <p>
+    Created by Liron de Castro for her final capstone at 
+    <a
+      href="https://www.thinkful.com/"
+    >
+      Thinkful
+    </a>
+    .
+  </p>
+  <a
+    className="separate_link"
+    href="https://www.linkedin.com/in/liron-de-castro/"
+  >
+    LinkedIn
+  </a>
+  <a
+    className="separate_link"
+    href="https://github.com/lirondco"
+  >
+    GitHub
+  </a>
+  <p>
+    Tel Aviv, Israel x San Diego, CA
+  </p>
+  <p
+    lang="zh-Hant"
+  >
+    人民有顛覆暴政的自由
+  </p>
+</footer>
+`;

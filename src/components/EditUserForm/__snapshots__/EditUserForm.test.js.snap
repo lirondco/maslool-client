@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditUserForm component renders the form 1`] = `
+<div
+  className="user_info"
+>
+  <p>
+    Username: 
+    <span>
+      test_user
+    </span>
+  </p>
+  <form
+    className="edit_email"
+    onSubmit={[Function]}
+    type="submit"
+  >
+    <Label
+      htmlFor="email"
+    >
+      Email: 
+    </Label>
+    <ForwardRef
+      defaultValue="test@ema.il"
+      id="email"
+      name="email"
+    />
+    <button
+      type="submit"
+    >
+      Change
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Cancel
+    </button>
+  </form>
+  <p>
+    Member since:
+     
+    <span>
+      <NiceDate />
+    </span>
+  </p>
+  <div
+    role="alert"
+  />
+</div>
+`;

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTrailForm component renders the form 1`] = `
+<div
+  className="NewTrailForm"
+>
+  <form
+    onSubmit={[Function]}
+    type="submit"
+  >
+    <div
+      className="main_form"
+    >
+      <Label
+        htmlFor="trail-name-input"
+      >
+        Trail Name: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="trail-name-input"
+        name="name"
+        required={true}
+      />
+      <br />
+      <Label
+        htmlFor="trail-website-input"
+      >
+        Website: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="trail-website-input"
+        name="website"
+        required={true}
+      />
+      <br />
+      <Label
+        htmlFor="trail-difficulty-select"
+      >
+        Difficulty: 
+        <Required />
+      </Label>
+      <select
+        id="trail-difficulty-select"
+        name="difficulty"
+      >
+        <option
+          key="Beginner"
+          value="Beginner"
+        >
+          Beginner
+        </option>
+        <option
+          key="Intermediate"
+          value="Intermediate"
+        >
+          Intermediate
+        </option>
+        <option
+          key="Advanced"
+          value="Advanced"
+        >
+          Advanced
+        </option>
+      </select>
+      <br />
+      <Label
+        htmlFor="trail_description_textarea"
+      >
+        Trail Description: 
+        <Required />
+      </Label>
+      <Textarea
+        id="trail_description_textarea"
+        name="description"
+        required={true}
+      />
+      <Label
+        htmlFor="trail_safety_textarea"
+      >
+        Safety Information (optional but recommended):
+      </Label>
+      <Textarea
+        id="trail_safety_textarea"
+        name="safety"
+      />
+      <Label
+        htmlFor="location_address_input"
+      >
+        Address Line: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="location_address_input"
+        name="address_line"
+        required={true}
+      />
+      <br />
+      <Label
+        htmlFor="location_city_input"
+      >
+        City: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="location_city_input"
+        name="city"
+        required={true}
+      />
+      <br />
+      <Label
+        htmlFor="location_region_input"
+      >
+        State or Region: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="location_region_input"
+        name="region"
+        required={true}
+      />
+      <br />
+      <Label
+        htmlFor="location_postalcode_input"
+      >
+        Post Code: 
+        <Required />
+      </Label>
+      <ForwardRef
+        id="location_postalcode_input"
+        name="postal_code"
+        required={true}
+      />
+      <br />
+    </div>
+    <div
+      role="alert"
+    />
+    <footer
+      className="double_buttons"
+    >
+      <ForwardRef
+        type="submit"
+      >
+        Submit Trail
+      </ForwardRef>
+      <ForwardRef
+        onClick={[Function]}
+      >
+        Cancel
+      </ForwardRef>
+    </footer>
+  </form>
+</div>
+`;

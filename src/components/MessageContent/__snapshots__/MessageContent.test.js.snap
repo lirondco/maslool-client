@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageContent component renders the message given props 1`] = `
+<div
+  className="MessageContent"
+>
+  <p>
+    From: 
+    <span>
+      test_user
+    </span>
+  </p>
+  <p>
+    Message user: 
+    <span>
+      <a
+        href="mailto: test@user.no"
+      >
+        test@user.no
+      </a>
+    </span>
+  </p>
+  <p
+    style={
+      Object {
+        "whiteSpace": "pre-wrap",
+      }
+    }
+  >
+    This is a message
+  </p>
+  <ForwardRef
+    onClick={[Function]}
+    type="button"
+  >
+    Delete Message
+  </ForwardRef>
+</div>
+`;

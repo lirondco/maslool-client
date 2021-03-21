@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments component renders a flagged comment 1`] = `
+<div
+  className="FlaggedComment"
+>
+  <p
+    className="flagged_user"
+  >
+    Comment Author: 
+    test_user
+     
+  </p>
+  <p
+    className="reported_by"
+  >
+    Flagged by: 
+  </p>
+  <p
+    className="comment_content"
+  >
+    Comment: 
+    <q>
+      test comment test comment
+    </q>
+  </p>
+  <div
+    className="action_buttons"
+  >
+    <Link
+      to="/trails/undefined"
+    >
+      <p
+        className="comment_link"
+      >
+        Go to page
+      </p>
+    </Link>
+    <ForwardRef
+      onClick={[Function]}
+      type="button"
+    >
+      Ban User
+    </ForwardRef>
+  </div>
+</div>
+`;
