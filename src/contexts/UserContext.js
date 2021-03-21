@@ -31,10 +31,6 @@ export class UserProvider extends Component {
     this.state = state;
   }
 
-  componentWillUnmount() {
-    TokenService.clearCallbackBeforeExpiry();
-  }
-
   setError = (error) => {
     console.error(error);
     this.setState({ error });
@@ -56,28 +52,23 @@ export class UserProvider extends Component {
       admin: jwtPayload.admin,
       username: jwtPayload.sub,
     });
-    TokenService.queueCallbackBeforeExpiry(() => {
-      this.fetchRefreshToken();
-    });
   };
 
   processLogout = () => {
     TokenService.clearAuthToken();
-    TokenService.clearCallbackBeforeExpiry();
     this.setUser({});
   };
 
   logoutBecauseIdle = () => {
     TokenService.clearAuthToken();
-    TokenService.clearCallbackBeforeExpiry();
     this.setUser({ idle: true });
   };
 
   fetchRefreshToken = () => {
     AuthApiService.refreshToken()
       .then((res) => {
-        TokenService.saveAuthToken(res.authToken);
-        TokenService.queueCallbackBeforeExpiry(() => {
+        TokenService.saveAuthToken(res.authToken)
+        (() => {
           this.fetchRefreshToken();
         });
       })
