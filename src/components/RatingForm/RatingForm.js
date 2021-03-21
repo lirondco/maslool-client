@@ -45,9 +45,9 @@ export default class RatingForm extends Component {
 
   editRating = (newRating) => {
     const ratingId = this.getRatingId();
-    TrailsApiService.editRating(ratingId, newRating).catch(
-      this.context.setError
-    );
+    TrailsApiService.editRating(ratingId, newRating)
+    .then(() => this.context.editRating(ratingId, {rating: newRating}))
+    .catch(this.context.setError);
   };
 
   render() {

@@ -23,6 +23,7 @@ export default class Trail extends Component {
   static contextType = TrailContext;
 
   loadComments = (trailId) => {
+    console.log('loopy loop')
     TrailsApiService.getTrailComments(trailId)
       .then(this.context.setComments)
       .catch(this.context.setError);
@@ -36,6 +37,8 @@ export default class Trail extends Component {
 
   componentDidMount = () => {
     const { trailId } = this.props.match.params;
+    this.loadComments(trailId)
+    this.loadRatings(trailId)
     TrailsApiService.getTrail(trailId)
       .then(this.context.setTrail)
       .catch(this.context.setError);
@@ -46,8 +49,6 @@ export default class Trail extends Component {
   }
 
   renderComments = () => {
-    const { trailId } = this.props.match.params;
-    this.loadComments(trailId);
     const { comments } = this.context;
 
     if (!comments) {
@@ -67,9 +68,9 @@ export default class Trail extends Component {
           <li className="trail_comment_list" key={`${comment.id}`}>
             <Comments
               comment={comment}
-              onFlagSuccess={this.handleRerenderComments}
-              onEditSuccess={this.handleRerenderComments}
-              onDeleteSuccess={this.handleRerenderComments}
+              onFlagSuccess={() => this.handleFlagComment(comment.id)}
+              onEditSuccess={this.handleEditComment}
+              onDeleteSuccess={() => this.handleDeleteComment(comment.id)}
             />
           </li>
         ))}
@@ -80,13 +81,20 @@ export default class Trail extends Component {
     );
   };
 
-  handleRerenderComments = () => {
-    this.renderComments();
+  handleEditComment = (data) => {
+    let comment = data
+    this.context.editComment(comment.id, {content: comment.content})
   };
 
+  handleDeleteComment = (commentId) => {
+    this.context.deleteComment(commentId)
+  }
+
+  handleFlagComment = (commentId) => {
+    this.context.flagComment(commentId)
+  }
+
   renderRatings = () => {
-    const { trailId } = this.props.match.params;
-    this.loadRatings(trailId);
     const { ratings } = this.context;
     if (!ratings) {
       return <p className="ratings_list">Loading ... </p>;

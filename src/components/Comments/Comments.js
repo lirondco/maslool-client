@@ -78,10 +78,10 @@ export default class Comments extends Component {
     const { content } = ev.target;
     TrailsApiService.editComment(comment.id, content.value)
       .then(this.setState({ commentEdited: null }))
+      .then(this.props.onEditSuccess({id: comment.id, content: content.value}))
       .then(() => {
         content.value = "";
       })
-      .then(this.props.onEditSuccess())
       .catch(this.context.setError);
   };
 
@@ -121,7 +121,7 @@ export default class Comments extends Component {
     } else {
       renderedContent = (
         <>
-          {user.id === comment.user.id || user.admin === true
+          {(user.id === comment.user.id || user.admin === true)
             ? this.renderButtons(comment)
             : ""}
           <p className="comment_content" style={{whiteSpace: "pre-wrap"}}>{comment.content}</p>
