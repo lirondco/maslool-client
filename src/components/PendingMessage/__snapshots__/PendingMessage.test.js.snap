@@ -10,15 +10,15 @@ exports[`PendingMessage component renders the message given props 1`] = `
   >
     x
   </button>
-  <p
+  <div
     className="outer_item"
   >
     From: 
     <span>
       test_user
     </span>
-  </p>
-  <p
+  </div>
+  <div
     className="inner_item"
   >
     Content:
@@ -31,8 +31,8 @@ exports[`PendingMessage component renders the message given props 1`] = `
          ... click to see more
       </span>
     </Link>
-  </p>
-  <p
+  </div>
+  <div
     className="outer_item"
   >
     Contact:
@@ -44,6 +44,6 @@ exports[`PendingMessage component renders the message given props 1`] = `
         test@user.no
       </a>
     </span>
-  </p>
+  </div>
 </div>
 `;

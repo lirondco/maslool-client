@@ -1,6 +1,6 @@
 # Maslool
 
-Live app: // pending //
+Live app: https://maslool-client.vercel.app
 
 ## API Documentation
 
