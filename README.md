@@ -119,3 +119,36 @@ I can add, edit, and delete trails ...
 
 ![add trail screenshot](/screenshots/addtrail.png "Add trail page")
 ![edit and delete screenshot](/screenshots/edittrail.png "Edit trail landing page")
+
+I can view messages from users ... 
+
+![message list screenshot](/screenshots/messagelist.png "Viewing all messages page")
+![message page screenshot](/screenshots/messagepage.png "Viewing a page showing the entirety of just one message")
+
+I can see all alerts from the entire site on one page ...
+
+![flagged comments screenshot](/screenshots/flaggedcomments.png "Viewing all flagged comments")
+
+I can view all users or filter by username ...
+
+![users list screenshot](/screenshots/userslist.png "Users list page showing all users" )
+
+### Error Handling
+
+Error messages displaying generated errors and loading displays are present all throughout the app. There are also two generalised error pages that may appear that are just so cute you may wanna force an error from time to time (just kidding!):
+
+404 Error: When you visit a webpage that does not exist or tried to force a data query that is not allowed. 
+
+![404 page photo](/screenshots/DANGER.png "error page when page is not found")
+
+General Error: This is what you see when there's an error in the code itself. This is not supposed to happen! Though if it does, rest assured that we are already working to fix the issue. 
+
+![Error page photo](/screenshots/error.png "error page when there's a site error")
+
+### Attributions
+
+I would like to thank [Thinkful](https://www.thinkful.com) for all the knowledge and expertise that they have taught me in the last many many months. This is an opportunity that I never thought would ever come to my life and I am grateful for it.
+
+I would also like to thank my friends especially Doug, Emily, Dims, and Yuval for helping me with finding sample trails to include and agreeing to test my app, and Sivan, Tzvi, Shira, Elisheva, Mya, and Veronica for the encouragement, moral support, and listening to me try to figure some codes out.
+
+And lastly, I would like to thank Jeff V. for being an amazing person and supporting me through my journey at Thinkful, and providing me with a great slogan for this web app. 

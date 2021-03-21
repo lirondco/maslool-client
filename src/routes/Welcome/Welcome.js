@@ -52,11 +52,15 @@ export default class Welcome extends Component {
           needs to be updated. Visit the places at your own risk, and always
           check local advisories before going on your trip. We are not
           responsible for any injury or bodily harm that a member may experience
-          in a location outlined in our website. <br /><br /> <em>Under no circumstance
-          shall we have any liability to you for any loss or damage of any kind
-          incurred as a result of the use of the site or reliance on any
-          information provided on the site. Your use of the site and your
-          reliance on any information on the site is solely at your own risk.</em>
+          in a location outlined in our website. <br />
+          <br />{" "}
+          <em>
+            Under no circumstance shall we have any liability to you for any
+            loss or damage of any kind incurred as a result of the use of the
+            site or reliance on any information provided on the site. Your use
+            of the site and your reliance on any information on the site is
+            solely at your own risk.
+          </em>
         </p>
         <br />
         <p>
