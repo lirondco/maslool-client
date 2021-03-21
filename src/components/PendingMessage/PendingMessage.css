@@ -35,7 +35,10 @@
     border-radius: 10px;
     border: slategray solid 2px;
     padding: 1%;
+    width: 20%;
     font-weight: bold;
+    text-align: right;
+    overflow-wrap: break-word;
   }
   .outer_item span {
     background-color: #fae5cf;
@@ -50,14 +53,15 @@
   .outer_item a:hover {
     color: purple;
   }
+
   .inner_item {
     border-radius: 10px;
     border: slategray solid 2px;
     padding: 1%;
-    width: 70%;
+    width: 600px !important;
     font-weight: bold;
     margin: 0 1% 0 1%;
-    text-align: center;
+    text-align: left;
   }
   .inner_item a span {
     border-radius: 10px;

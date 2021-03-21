@@ -58,26 +58,64 @@ And once registered I am automatically redirected to their rules page and more t
 ![Users rules page screenshot](/screenshots/welcomeuser.png "User welcome and rules page")
 
 And now I'm in the fun part! I am given several options to search and filtre the results. Let's leave it blank first ...
+
 ![Search trail page that is blank screenshot](/screenshots/blanksearchtrail.png "Black search form on trails page")
 
 All trails are returned as expected, in alphabetical name order ...
+
 ![All trails list screenshot](/screenshots/alltrails.png "All trails list")
 
 I am a beginner hiker from California and I want something with a canyon and a rating of at least 4 ...
+
 ![Specific trails search screenshot](/screenshots/searchtrail.png "Searching with specific criteria")
 
 Oh, I guess not... 
+
 ![Trail search returns nothing screenshot ](/screenshots/trailnotfound.png "Search result returned empty")
 
 Let me lower my standards to a rating of 3 and above ... 
+
 ![Search query returned a trail screenshot](/screenshots/searchreturn.png "Trail search returned a trail")
 
 Here is the trail's main description and safety information ...
+
 ![Trail description screenshot](/screenshots/trailmain.png "Trail description page")
 ![Trail safety screenshot](/screenshots/trailsafety.png "Trail safety page")
 
 Here are the comments. Looks like someone got banned ... 
+
 ![Comments screenshot](/screenshots/comments.png "Comments page")
 
 And I posted my first comment! I can edit and delete it too, but oddly (and rightfully so!) I can't flag my own comment ... 
+
 ![Comment posted screenshot](/screenshots/postcomment.png "User posted a comment")
+
+I gave it a five star rating ...
+
+![rating screenshot](/screenshots/rating.png "User gave a rating")
+
+Now moving on ... how about I contact the admins? It's so cool how it loaded my own message upon submission too!
+
+![contact admin screenshot](/screenshots/contactadmin.png, "User is writing to admins")
+![contact admin sent success](/screenshots/contactadmin.png "User has written to admins")
+
+And here's where I can find my user credentials including an ability to change my email address ...
+
+![user info screenshot](/screenshots/userinfo.png "User info page with user's details")
+
+And I clicked log out and I'm back to the home page that non-users see! And when I logged back in, I got redirected straight to the trail search page and not the rules!
+
+ ### As a Moderator
+
+ I get tab options accessible to site administrators only ...
+
+ ![admin banner screenshot](/screenshots/adminnavs.png "Admin's header with all links")
+
+ I can edit, delete, and unflag comments ... 
+
+ ![comments with admin features screenshot](/screenshots/admincomment.png "Comment but with admin features")
+
+I can add, edit, and delete trails ... 
+
+![add trail screenshot](/screenshots/addtrail.png "Add trail page")
+![edit and delete screenshot](/screenshots/edittrail.png "Edit trail landing page")

@@ -23,23 +23,23 @@ export default class PendingMessage extends Component {
         <button aria-label="delete" onClick={this.handleDeleteClick}>
           x
         </button>
-        <p className="outer_item">
+        <div className="outer_item">
           From: <span>{pending.user.username}</span>
-        </p>
-        <p className="inner_item">
+        </div>
+        <div className="inner_item">
           Content:{" "}
           <Link to={`/messages/${pending.id}`}>
             <span>
               {pending.message.substring(0, 20)} ... click to see more
             </span>
           </Link>
-        </p>
-        <p className="outer_item">
+        </div>
+        <div className="outer_item">
           Contact:{" "}
           <span>
             <a href={`mailto:${pending.user.email}`}>{pending.user.email}</a>
           </span>
-        </p>
+        </div>
       </div>
     );
   }
