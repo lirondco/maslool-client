@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrailSearch route component renders the complete page when search is active 1`] = `
+<section
+  className="TrailSearch"
+>
+  <h2>
+    Base Camp
+  </h2>
+  <hr />
+  <TrailSearchForm
+    onSearchSuccess={[Function]}
+  />
+</section>
+`;
+
+exports[`TrailSearch route component renders the search result when search is not active 1`] = `
+<section
+  className="TrailSearch"
+>
+  <h2>
+    Base Camp
+  </h2>
+  <hr />
+  <Link
+    onClick={[Function]}
+    to="#"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <ul>
+    <li
+      key="2"
+    >
+      <SearchResult
+        id={2}
+        key="2"
+        name="other test trail"
+        region="Iowa"
+      />
+    </li>
+    <li
+      key="1"
+    >
+      <SearchResult
+        id={1}
+        key="1"
+        name="test trail"
+        region="Pennsylvania"
+      />
+    </li>
+  </ul>
+</section>
+`;

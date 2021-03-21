@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageRoute component renders the complete message 1`] = `
+<section
+  className="MessageRoute"
+>
+  <h2>
+    Message from 
+    spongebob
+  </h2>
+  <hr />
+  <Link
+    to="/messages"
+  >
+    <h3>
+      &lt;
+       Back to Messages
+    </h3>
+  </Link>
+  <div
+    role="alert"
+  >
+    <p
+      className="error"
+    >
+      Fetching message ...
+    </p>
+  </div>
+  <MessageContent
+    onDeleteClick={[Function]}
+    pending={
+      Object {
+        "error": null,
+        "id": 9,
+        "message": "test",
+        "user": Object {
+          "admin": false,
+          "banned": false,
+          "email": "sb.squarepants@bikinibottom.net",
+          "id": 1,
+          "join_date": "2021-03-11T06:47:06.477Z",
+          "username": "spongebob",
+        },
+      }
+    }
+  />
+</section>
+`;

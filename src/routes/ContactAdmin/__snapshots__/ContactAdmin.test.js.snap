@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactAdmin route renders the complete page 1`] = `
+<section
+  className="ContactAdmin"
+>
+  <h2>
+    Contact Admins
+  </h2>
+  <hr />
+  <h4>
+    Send us your suggestions, comments, or general inquiries! If you want to suggest a new trail to be included, please include as much details as you can including a name, address, and a website.
+  </h4>
+  <ContactForm />
+</section>
+`;

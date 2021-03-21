@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList route component renders the complete page when state is empty 1`] = `
+<section
+  className="UsersList"
+>
+  <h2>
+    Users List
+  </h2>
+  <hr />
+  <Label
+    htmlFor="search_user_box"
+  >
+    Filter by username:
+  </Label>
+  <ForwardRef
+    id="search_user_box"
+    name="searchString"
+    onChange={[Function]}
+  />
+  <div
+    role="alert"
+  />
+  <ul
+    className="user_list"
+  />
+</section>
+`;
+
+exports[`UsersList route component renders the complete page when state is not empty 1`] = `
+<section
+  className="UsersList"
+>
+  <h2>
+    Users List
+  </h2>
+  <hr />
+  <Label
+    htmlFor="search_user_box"
+  >
+    Filter by username:
+  </Label>
+  <ForwardRef
+    id="search_user_box"
+    name="searchString"
+    onChange={[Function]}
+  />
+  <div
+    role="alert"
+  />
+  <ul
+    className="user_list"
+  >
+    <li
+      key="2"
+    >
+      <UserComponent
+        onBanUser={[Function]}
+        user={
+          Object {
+            "admin": false,
+            "banned": true,
+            "banned_by": "sandy",
+            "email": "p.star@bikinibottom.net",
+            "id": 2,
+            "join_date": "2021-03-11T06:47:06.477Z",
+            "username": "patrick",
+          }
+        }
+      />
+    </li>
+    <li
+      key="3"
+    >
+      <UserComponent
+        onBanUser={[Function]}
+        user={
+          Object {
+            "admin": true,
+            "banned": false,
+            "banned_by": null,
+            "email": "sandy.cheeks@squirrelmail.com",
+            "id": 3,
+            "join_date": "2021-03-11T06:47:06.477Z",
+            "username": "sandy",
+          }
+        }
+      />
+    </li>
+    <li
+      key="6"
+    >
+      <UserComponent
+        onBanUser={[Function]}
+        user={
+          Object {
+            "admin": false,
+            "banned": false,
+            "banned_by": null,
+            "email": "s.tentacles@krustykrab.com",
+            "id": 6,
+            "join_date": "2021-03-11T06:47:06.477Z",
+            "username": "squidward",
+          }
+        }
+      />
+    </li>
+  </ul>
+</section>
+`;

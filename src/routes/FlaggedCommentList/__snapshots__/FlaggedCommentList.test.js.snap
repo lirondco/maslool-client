@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlaggedCommentList component renders the complete list 1`] = `
+<section
+  className="FlaggedCommentList"
+>
+  <h2>
+    Flagged comments
+  </h2>
+  <hr />
+  <ul
+    className="flagged_comments"
+  >
+    <li
+      key="2"
+    >
+      <FlaggedComment
+        comment={
+          Object {
+            "content": "Mister Krabs is lying do not believe him he has not paid me my last salary!!!",
+            "flagged": true,
+            "flagged_by": "squidward",
+            "id": 2,
+            "last_modified": "2021-03-11T06:47:06.477Z",
+            "trail_id": 3,
+            "user": Object {
+              "admin": false,
+              "banned": false,
+              "id": 1,
+              "join_date": "2021-03-11T06:47:06.477468",
+              "username": "spongebob",
+            },
+          }
+        }
+        onBanClick={[Function]}
+      />
+    </li>
+    <li
+      key="9"
+    >
+      <FlaggedComment
+        comment={
+          Object {
+            "content": "why did my friend get banned? ",
+            "flagged": true,
+            "flagged_by": "squidward",
+            "id": 9,
+            "last_modified": "2021-03-20T17:37:56.565Z",
+            "trail_id": 1,
+            "user": Object {
+              "admin": false,
+              "banned": false,
+              "id": 1,
+              "join_date": "2021-03-11T06:47:06.477468",
+              "username": "spongebob",
+            },
+          }
+        }
+        onBanClick={[Function]}
+      />
+    </li>
+  </ul>
+  <div
+    role="alert"
+  />
+</section>
+`;

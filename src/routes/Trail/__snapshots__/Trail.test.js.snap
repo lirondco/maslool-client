@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trail route component renders the loading page 1`] = `
+<section
+  className="TrailPage"
+>
+  <Loading />
+</section>
+`;
+
+exports[`Trail route component renders the page with comments 1`] = `
+<section
+  className="TrailPage"
+>
+  <h2>
+    Test
+  </h2>
+  <hr />
+  <Link
+    to="/trails"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <TrailInfo
+    trail={
+      Object {
+        "date_published": "2021-03-11T06:47:06.477Z",
+        "description": "test desc",
+        "difficulty": "Beginner",
+        "id": 1,
+        "location": Object {
+          "address_line": "111 Te St.",
+          "city": "El Testo",
+          "postal_code": "77777",
+          "region": "Testxas",
+        },
+        "name": "Test",
+        "number_of_comments": 3,
+        "number_of_ratings": 7,
+        "rating": 2,
+        "safety": "test saf",
+        "website": "test.com",
+      }
+    }
+  />
+  <div
+    className="LowerSection"
+  >
+    <ul
+      className="trailnav"
+    >
+      <li
+        key="description"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          exact={true}
+          onClick={[Function]}
+          to="/trails/1"
+        >
+          Description
+        </NavLink>
+      </li>
+      <li
+        key="safety"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/safety"
+        >
+          Safety
+        </NavLink>
+      </li>
+      <li
+        key="comments"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/comments"
+        >
+          Comments
+        </NavLink>
+      </li>
+      <li
+        key="ratings"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/ratings"
+        >
+          Ratings
+        </NavLink>
+      </li>
+    </ul>
+    <ul
+      className="comments_list"
+    >
+      <li
+        className="trail_comment_list"
+        key="no_comment"
+      >
+        Be the first to comment!
+         
+      </li>
+      <li
+        className="trail_comment_list"
+        key="comment_form"
+      >
+        <CommentForm />
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Trail route component renders the page with context 1`] = `
+<section
+  className="TrailPage"
+>
+  <h2>
+    Test
+  </h2>
+  <hr />
+  <Link
+    to="/trails"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <TrailInfo
+    trail={
+      Object {
+        "date_published": "2021-03-11T06:47:06.477Z",
+        "description": "test desc",
+        "difficulty": "Beginner",
+        "id": 1,
+        "location": Object {
+          "address_line": "111 Te St.",
+          "city": "El Testo",
+          "postal_code": "77777",
+          "region": "Testxas",
+        },
+        "name": "Test",
+        "number_of_comments": 3,
+        "number_of_ratings": 7,
+        "rating": 2,
+        "safety": "test saf",
+        "website": "test.com",
+      }
+    }
+  />
+  <div
+    className="LowerSection"
+  >
+    <ul
+      className="trailnav"
+    >
+      <li
+        key="description"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          exact={true}
+          onClick={[Function]}
+          to="/trails/1"
+        >
+          Description
+        </NavLink>
+      </li>
+      <li
+        key="safety"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/safety"
+        >
+          Safety
+        </NavLink>
+      </li>
+      <li
+        key="comments"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/comments"
+        >
+          Comments
+        </NavLink>
+      </li>
+      <li
+        key="ratings"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/ratings"
+        >
+          Ratings
+        </NavLink>
+      </li>
+    </ul>
+    <TrailDescription
+      trail={
+        Object {
+          "date_published": "2021-03-11T06:47:06.477Z",
+          "description": "test desc",
+          "difficulty": "Beginner",
+          "id": 1,
+          "location": Object {
+            "address_line": "111 Te St.",
+            "city": "El Testo",
+            "postal_code": "77777",
+            "region": "Testxas",
+          },
+          "name": "Test",
+          "number_of_comments": 3,
+          "number_of_ratings": 7,
+          "rating": 2,
+          "safety": "test saf",
+          "website": "test.com",
+        }
+      }
+    />
+  </div>
+</section>
+`;
+
+exports[`Trail route component renders the page with description 1`] = `
+<section
+  className="TrailPage"
+>
+  <h2>
+    Test
+  </h2>
+  <hr />
+  <Link
+    to="/trails"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <TrailInfo
+    trail={
+      Object {
+        "date_published": "2021-03-11T06:47:06.477Z",
+        "description": "test desc",
+        "difficulty": "Beginner",
+        "id": 1,
+        "location": Object {
+          "address_line": "111 Te St.",
+          "city": "El Testo",
+          "postal_code": "77777",
+          "region": "Testxas",
+        },
+        "name": "Test",
+        "number_of_comments": 3,
+        "number_of_ratings": 7,
+        "rating": 2,
+        "safety": "test saf",
+        "website": "test.com",
+      }
+    }
+  />
+  <div
+    className="LowerSection"
+  >
+    <ul
+      className="trailnav"
+    >
+      <li
+        key="description"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          exact={true}
+          onClick={[Function]}
+          to="/trails/1"
+        >
+          Description
+        </NavLink>
+      </li>
+      <li
+        key="safety"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/safety"
+        >
+          Safety
+        </NavLink>
+      </li>
+      <li
+        key="comments"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/comments"
+        >
+          Comments
+        </NavLink>
+      </li>
+      <li
+        key="ratings"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/ratings"
+        >
+          Ratings
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Trail route component renders the page with ratings 1`] = `
+<section
+  className="TrailPage"
+>
+  <h2>
+    Test
+  </h2>
+  <hr />
+  <Link
+    to="/trails"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <TrailInfo
+    trail={
+      Object {
+        "date_published": "2021-03-11T06:47:06.477Z",
+        "description": "test desc",
+        "difficulty": "Beginner",
+        "id": 1,
+        "location": Object {
+          "address_line": "111 Te St.",
+          "city": "El Testo",
+          "postal_code": "77777",
+          "region": "Testxas",
+        },
+        "name": "Test",
+        "number_of_comments": 3,
+        "number_of_ratings": 7,
+        "rating": 2,
+        "safety": "test saf",
+        "website": "test.com",
+      }
+    }
+  />
+  <div
+    className="LowerSection"
+  >
+    <ul
+      className="trailnav"
+    >
+      <li
+        key="description"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          exact={true}
+          onClick={[Function]}
+          to="/trails/1"
+        >
+          Description
+        </NavLink>
+      </li>
+      <li
+        key="safety"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/safety"
+        >
+          Safety
+        </NavLink>
+      </li>
+      <li
+        key="comments"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/comments"
+        >
+          Comments
+        </NavLink>
+      </li>
+      <li
+        key="ratings"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/ratings"
+        >
+          Ratings
+        </NavLink>
+      </li>
+    </ul>
+    <ul
+      className="ratings_list"
+    >
+      <li
+        className="trail_rating_list"
+        key="set_rating"
+      >
+        <RatingForm />
+      </li>
+      <li
+        className="trail_rating_list"
+        key="no_rating"
+      >
+        Be the first to rate!
+         
+      </li>
+    </ul>
+  </div>
+</section>
+`;
+
+exports[`Trail route component renders the page with safety 1`] = `
+<section
+  className="TrailPage"
+>
+  <h2>
+    Test
+  </h2>
+  <hr />
+  <Link
+    to="/trails"
+  >
+    <h3>
+      &lt;
+       Back to Search
+    </h3>
+  </Link>
+  <TrailInfo
+    trail={
+      Object {
+        "date_published": "2021-03-11T06:47:06.477Z",
+        "description": "test desc",
+        "difficulty": "Beginner",
+        "id": 1,
+        "location": Object {
+          "address_line": "111 Te St.",
+          "city": "El Testo",
+          "postal_code": "77777",
+          "region": "Testxas",
+        },
+        "name": "Test",
+        "number_of_comments": 3,
+        "number_of_ratings": 7,
+        "rating": 2,
+        "safety": "test saf",
+        "website": "test.com",
+      }
+    }
+  />
+  <div
+    className="LowerSection"
+  >
+    <ul
+      className="trailnav"
+    >
+      <li
+        key="description"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          exact={true}
+          onClick={[Function]}
+          to="/trails/1"
+        >
+          Description
+        </NavLink>
+      </li>
+      <li
+        key="safety"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/safety"
+        >
+          Safety
+        </NavLink>
+      </li>
+      <li
+        key="comments"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/comments"
+        >
+          Comments
+        </NavLink>
+      </li>
+      <li
+        key="ratings"
+      >
+        <NavLink
+          activeClassName="active_trailnav"
+          onClick={[Function]}
+          to="/trails/1/ratings"
+        >
+          Ratings
+        </NavLink>
+      </li>
+    </ul>
+    <TrailSafety
+      trail={
+        Object {
+          "date_published": "2021-03-11T06:47:06.477Z",
+          "description": "test desc",
+          "difficulty": "Beginner",
+          "id": 1,
+          "location": Object {
+            "address_line": "111 Te St.",
+            "city": "El Testo",
+            "postal_code": "77777",
+            "region": "Testxas",
+          },
+          "name": "Test",
+          "number_of_comments": 3,
+          "number_of_ratings": 7,
+          "rating": 2,
+          "safety": "test saf",
+          "website": "test.com",
+        }
+      }
+    />
+  </div>
+</section>
+`;

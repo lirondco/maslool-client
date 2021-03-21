@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfo route component renders the complete page 1`] = `
+<section
+  className="UserInfo"
+>
+  <h2>
+    User Profile
+  </h2>
+  <hr />
+  <EditUserForm />
+</section>
+`;

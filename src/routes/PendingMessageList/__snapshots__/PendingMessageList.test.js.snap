@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PendingMessageList component renders the complete list 1`] = `
+<section
+  className="PendingMessageList"
+>
+  <h2>
+    Pending Messages
+  </h2>
+  <hr />
+  <ul
+    className="message_list"
+  >
+    <li
+      key="9"
+    >
+      <PendingMessage
+        onDeleteClick={[Function]}
+        pending={
+          Object {
+            "id": 9,
+            "message": "test message",
+            "user": Object {
+              "admin": false,
+              "banned": false,
+              "email": "sb.squarepants@bikinibottom.net",
+              "id": 1,
+              "join_date": "2021-03-11T06:47:06.477Z",
+              "username": "spongebob",
+            },
+          }
+        }
+      />
+    </li>
+  </ul>
+  <div
+    role="alert"
+  />
+</section>
+`;

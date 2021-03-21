@@ -28,7 +28,6 @@ export default class FlaggedCommentList extends Component {
     }
 
     renderComments = (comments) => {
-        console.log(comments, 'comments')
         return (
             <ul className='flagged_comments'>
                 {comments.map(comment =>

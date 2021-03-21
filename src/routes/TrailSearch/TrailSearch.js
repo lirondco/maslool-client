@@ -28,15 +28,17 @@ export default class TrailSearch extends Component {
 
   renderResults = () => {
     const { searchResult } = this.context;
-    const sortedResult = searchResult.sort((a, b) => a.name > b.name ? 1 : -1)
+    const sortedResult = searchResult.sort((a, b) =>
+      a.name > b.name ? 1 : -1
+    );
     return (
       <>
         <Link to="#" onClick={this.handleBackClick}>
           <h3>{"<"} Back to Search</h3>
         </Link>
-        {sortedResult.map((trail) => {
-          return (
-            <ul>
+        <ul>
+          {sortedResult.map((trail, idx) => {
+            return (
               <li key={trail.id}>
                 <SearchResult
                   key={trail.id}
@@ -50,9 +52,9 @@ export default class TrailSearch extends Component {
                   postal_code={trail.location.postal_code}
                 />
               </li>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
       </>
     );
   };

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTrail route renders the page 1`] = `
+<section
+  className="AddTrail"
+>
+  <h2>
+    Trail Options
+  </h2>
+  <hr />
+  <span
+    className="AddTrail_buttons"
+  >
+    <ForwardRef
+      onClick={[Function]}
+    >
+      Add
+    </ForwardRef>
+    <ForwardRef
+      onClick={[Function]}
+    >
+      Edit
+    </ForwardRef>
+  </span>
+</section>
+`;
