@@ -5,7 +5,7 @@ import "./PendingMessageList.css";
 
 export default class PendingMessageList extends Component {
   state = {
-    pending: null,
+    pending: [],
     error: null,
   };
 
