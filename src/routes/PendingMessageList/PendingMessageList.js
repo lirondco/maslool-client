@@ -48,7 +48,7 @@ export default class PendingMessageList extends Component {
       <section className="PendingMessageList">
         <h2>Pending Messages</h2>
         <hr />
-        {this.state.pending.length ? (
+        {this.state.pending.length === 0 ? (
           <h4>You have no pending messages.</h4>
         ) : (
           this.renderMessages()
