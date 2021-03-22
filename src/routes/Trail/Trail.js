@@ -23,7 +23,6 @@ export default class Trail extends Component {
   static contextType = TrailContext;
 
   loadComments = (trailId) => {
-    console.log('loopy loop')
     TrailsApiService.getTrailComments(trailId)
       .then(this.context.setComments)
       .catch(this.context.setError);

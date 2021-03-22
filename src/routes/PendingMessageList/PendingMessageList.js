@@ -10,7 +10,6 @@ export default class PendingMessageList extends Component {
   };
 
   loadAllPending = () => {
-    this.setState({ error: "Loading messages ..." });
     PendingApiService.getAllPending()
       .then((pending) => this.setState({ pending, error: null }))
       .catch((er) => this.setState({ er }));
@@ -49,7 +48,7 @@ export default class PendingMessageList extends Component {
       <section className="PendingMessageList">
         <h2>Pending Messages</h2>
         <hr />
-        {this.state.pending === null ? (
+        {this.state.pending.length ? (
           <h4>You have no pending messages.</h4>
         ) : (
           this.renderMessages()
