@@ -29,10 +29,9 @@ export default class Home extends Component {
           have a great adventure!
         </p>
         <p>
-          Thinkful staff: I am going to submit a separate gist containing two different types of
-          users that you can use to test our functionality: an admin, and a banned user.
-          Feel free to register a new user using test credentials to experience what new users would
-          normally experience. 
+          Wanna try the app out? You can either register as a new user or use the sample user below:
+          <br />Username: SampleUser
+          <br />Password: SamplePassword1!
         </p>
       </section>
     );
