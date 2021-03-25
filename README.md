@@ -1,6 +1,6 @@
 # Maslool
 
-Live app: https://maslool.vercel.app/home
+Live app: https://maslool.lirondc.com/
 
 ## API Documentation
 
