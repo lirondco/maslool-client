@@ -29,7 +29,7 @@
 .flag_button {
   margin: 0 !important;
   border: none;
-  color: red;
+  color: #900909;
   text-decoration: underline;
 }
 
@@ -38,10 +38,11 @@
   border: none;
   color: maroon;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .flagged_comment {
-  color: red;
+  color: #900909;
 }
 
 .comment_date {
